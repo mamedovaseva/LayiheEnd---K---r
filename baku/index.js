@@ -238,12 +238,10 @@ document.getElementById("favorite-icon").addEventListener("click", function () {
 
 
 document.querySelector(".home").addEventListener("click", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Default link davranışını ləğv edir
 
-    // Cari URL-ə əsaslanan tam yol
-    const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
-    const redirectUrl = `${basePath}/index.html`;
-
+    // GitHub Pages URL'si üçün proyekt adını əlavə edin
+    const redirectUrl = `${window.location.origin}/LayiheEnd---K---r/index.html`;
     console.log("Redirecting to:", redirectUrl);
 
     window.location.href = redirectUrl;
