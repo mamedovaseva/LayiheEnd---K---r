@@ -238,14 +238,17 @@ document.getElementById("favorite-icon").addEventListener("click", function () {
 
 
 document.querySelector(".home").addEventListener("click", function (e) {
-    e.preventDefault(); // Default link davranışını ləğv edir
+    e.preventDefault();
 
-    // İstifadə olunan nisbətən yol
-    const redirectUrl = "/index.html"; // Kök qovluqdakı `index.html` faylını göstərir
+    // Cari URL-ə əsaslanan tam yol
+    const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
+    const redirectUrl = `${basePath}/index.html`;
+
     console.log("Redirecting to:", redirectUrl);
 
     window.location.href = redirectUrl;
 });
+
 
 
 document.querySelector(".home1").addEventListener("click", function (e) {
