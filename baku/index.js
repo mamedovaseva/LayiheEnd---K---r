@@ -238,10 +238,10 @@ document.getElementById("favorite-icon").addEventListener("click", function () {
 
 
 document.querySelector(".home").addEventListener("click", function (e) {
-    e.preventDefault(); // Default link davranışını ləğv edir
+    e.preventDefault(); // Default davranışı ləğv edir
 
-    // GitHub Pages URL'si üçün proyekt adını əlavə edin
-    const redirectUrl = `${window.location.origin}/LayiheEnd---K---r/index.html`;
+    // Bakı qovluğundan kök qovluqdakı `index.html` faylını göstərin
+    const redirectUrl = "../index.html"; // Bakı qovluğundan bir səviyyə yuxarı qalxır
     console.log("Redirecting to:", redirectUrl);
 
     window.location.href = redirectUrl;
