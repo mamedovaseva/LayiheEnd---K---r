@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qəbələ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>       
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../baku/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="first-title">
+            <p id="cities">Azərbaycan Turizm Bürosu</p>
+            <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+            <div class="burger-menu" >
+                <ul>
+                    <li><a href="" class="home1">Ana səhifə</a></li>
+                    <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
+                    <li id="mapTrigger1">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district1">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mapContainer" ></div>
+        <div id="map-modal" class="modal">
+            <span class="close" id="close-modal">X</span>
+        </div>
+            <div class="second-title">
+                <ul>
+                    <li><a href="" class="home">Ana səhifə</a></li>
+                    <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
+                    <li id="mapTrigger">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+                <div class="register-section">
+                    <img src="../Images/user.png" alt="User Icon" class="user-icon">
+                    <a href="../register.html" class="register-link">Qeydiyyat</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Axtarış edin...">
+                    <div id="search-results"></div>
+                </div>
+                <div id="favorite-icon">
+                    <img src="../Images/heart.png" alt="">
+                </div>
+                
+            </div>
+        </header> 
+        <main>
+            <section class="main-part">
+                <img src="./gabala1.png" alt="" class="backgroundimage">
+                <p class="name">Qəbələ</p>
+                <i>təbiət qoynunda istirahət</i>
+                <p class="information">Şəhər həyatından bezmisinizsə, dərhal Qəbələyə yollanmalısınız. Burada şam meşələrinin əhatəsində ruhunuz tamamilə dincələcək. Nohur gölü və yaxınlığında yerləşən sərin dağ şəlalələrinin şırıltısı sizi sanki yeniləyəcək. Macəra axtarışında olanlar isə Tufandağa da baş çəkə bilərlər.</p>
+            </section>
+            <section class="main-part2">
+                <h2>Gözəl təbiət qoynunda istirahət imkanını əldən buraxmayın</h2>
+                <p>Azərbaycanın ən məşhur kurortlarından birinə xoş gəlmisiniz! Qışda Qafqaz dağlarında xizəkçilik və snoubordinqlə, yayda isə bir çox adrenalinlə dolu fəaliyyətlərlə, o cümlədən kvadrasikl, atıcılıq, paraplanla məşğul ola və gəzintilərdə iştirak edə bilərsiniz. Bir çox otellər mükəmməl üzgüçülük hovuzları və spalara sahibdir və əgər Yengicə və “Chenot Palace”a baş çəksəniz, termal sulardan yararlanmaq, müalicəvi neft vannaları qəbul etmək və şiroterapiya kurslarına qatılmaq imkanı əldə edəcəksiniz.Qəbələni ilin bütün fəsillərində müxtəlif vasitələrlə ziyarət etmək mümkündür. Səyahətinizi daha rahat və komfortlu etmək üçün Bakı-Qəbələ-Bakı marşrutu üzrə hərəkət edən dörd vaqonlu, ikimərtəbəli sürətli sərnişin qatarına üstünlük verə bilərsiniz. </p>
+            </section>
+            <section class="main-part3">
+                <h2 class="fact">Maraqlı faktlar</h2>
+                <div class="interesting-facts">
+                <div class="interesting-fact">
+                    <img src="./ancient-capital.png" alt="">
+                    <h2>Qədim Paytaxt</h2>
+                    <p>Qəbələ eramızdan əvvəl IV əsrdən etibarən Qafqaz Albaniyasının paytaxtı olmuş və təxminən 1500 il ərzində siyasi, mədəni və iqtisadi mərkəz kimi inkişaf etmişdir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./archaeological-Finds.png" alt="">
+                    <h2>Tarixi Arxeoloji Tapıntılar</h2>
+                    <p>Qəbələ yaxınlığında yerləşən Chukhur Gabala (Çuxur Qəbələ) adlanan ərazidə qədim qala divarları, qədim sikkələr və keramika nümunələri aşkar edilmişdir. Bu tapıntılar Qəbələnin qədim tarixindən xəbər verir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./music-festival.png" alt="">
+                    <h2>Beynəlxalq Musiqi Festivalı</h2>
+                    <p>Hər il Qəbələdə keçirilən Beynəlxalq Musiqi Festivalı klassik musiqi dünyasının tanınmış simalarını və yerli musiqiçiləri bir araya gətirir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./lake-nohur.png" alt="">
+                    <h2>Nohur Gölü</h2>
+                    <p>Füsunkar təbiəti ilə seçilən Nohur Gölü turistlərin ən çox ziyarət etdiyi yerlərdən biridir. Göl dağlarla əhatə olunub və sakit istirahət üçün ideal məkandır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./tufandag.png" alt="">
+                    <h2>Tufandağ Turizm Kompleksi</h2>
+                    <p>Qəbələ qış idman növlərinin Azərbaycandakı əsas mərkəzlərindən biridir. Tufandağ Qış-Yay Turizm Kompleksi dağ xizəyi, funikulyor gəzintiləri və möhtəşəm mənzərələr təqdim edir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./gabaland.png" alt="">
+                    <h2>Qəbələnd Əyləncə Mərkəzi</h2>
+                    <p>Qəbələnd Azərbaycanın ən böyük açıq hava əyləncə parkıdır. Burada müxtəlif attraksionlar, akvapark və oyun meydançaları mövcuddur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./waterfall.png" alt="">
+                    <h2>Təbii Şəlalələr</h2>
+                    <p>Qəbələ ərazisində Yeddi Gözəl və Afurca kimi məşhur şəlalələr yerləşir. Bu yerlər təbiət həvəskarlarının sevimli ziyarət məkanlarındandır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./radar.png" alt="">
+                    <h2>Qəbələ Radar Stansiyası</h2>
+                    <p>Sovet dövründə inşa edilmiş Qəbələ Radar Stansiyası strateji əhəmiyyətə malik idi. O zaman radar sistemi uzaq məsafədən raketləri izləmək üçün istifadə olunurdu.</p>
+                </div>
+            </div>
+            </section>
+            <div id="scroll-to-top" class="scroll-to-top">↑</div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>Azərbaycan Turizm Bürosu</h3>
+                    <p>Azərbaycanın zəngin mədəni irsi, təbiət möcüzələri və turizm imkanlarını dünya ilə paylaşmaq üçün buradayıq.</p>
+                    <p><strong>Email:</strong> info@azerbaijanturism.az</p>
+                    <p><strong>Telefon:</strong> +994 00 123 45 60</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tez keçidlər</h3>
+                    <ul>
+                    <li><a href="../index.html#about1">Haqqımızda</a></li>
+                    <li><a href="#cities">Bölgələr</a></li>
+                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                    <li><a href="../review/index.html">Rəylər</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi izləyin</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/?locale=az_AZ"><img src="../Images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
+                        <a href="https://x.com/"><img src="../Images/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/"><img src="../Images/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+            </div>
+        </footer>
+    <script src="../baku/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azerbaijan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="first-title" id="cities">
+            <p>Azərbaycan Turizm Bürosu</p>
+            <div><img src="./Images/burger.svg" alt="" class="burger"></div>
+        </div>
+        <div class="burger-menu" >
+                <ul>
+                    <li><a href="" >Ana səhifə</a></li>
+                    <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
+                    <li id="mapTrigger1">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district1">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="mapContainer" ></div>
+        <div id="map-modal" class="modal">
+            <span class="close" id="close-modal">X</span>
+        </div>
+            <div class="second-title">
+                <ul>
+                    <li><a href="" >Ana səhifə</a></li>
+                    <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
+                    <li id="mapTrigger">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+                <div class="register-section">
+                    <img src="./Images/user.png" alt="User Icon" class="user-icon " >
+                    <a href="register.html" class="register-link">Qeydiyyat</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Axtarış edin...">
+                    <div id="search-results"></div>
+                </div>
+                <div id="favorite-icon">
+                    <img src="./Images/heart.png" alt="">
+                </div>
+                
+            </div>
+            
+        </header> 
+        <div id="scroll-to-top" class="scroll-to-top">↑</div>
+    <main> 
+        <section>
+            <div class="images">
+                <div class="slide">
+                    <img src="./Images/photo1.png" alt="" class="photo">
+                    <p class="slide-text">sakitləşdirən mənzərə <a href="./slide1/" class="link-slide" > ...Daha Ətraflı</a></p>
+                </div>
+                <div class="slide">
+                    <img src="./Images/photo2.png" alt="" class="photo">
+                    <p class="slide-text">sakit təbiət <a href="./slide2/" class="link-slide">...Daha Ətraflı</a></p>
+                </div>
+                <div class="slide">
+                    <img src="./Images/photo3.png" alt="" class="photo">
+                    <p class="slide-text">müasir həyat<a href="./slide3/" class="link-slide">...Daha Ətraflı</a></p>
+                </div>
+                <div class="slide">
+                    <img src="./Images/photo4.png" alt="" class="photo">
+                    <p class="slide-text">sadə gözəllik <a href="./slide4/" class="link-slide">...Daha Ətraflı</a></p>
+                </div>
+                <div class="slide">
+                    <img src="./Images/photo5.png" alt="" class="photo">
+                    <p class="slide-text">Qədim mədəniyyət <a href="./slide5/" class="link-slide">...Daha Ətraflı</a></p>
+                </div>
+            </div>
+            
+            <div class="indicators">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot" id="about1"></div>
+            </div>
+            <div class="about">
+                <img src="./Images/about-image.gif" alt="">
+                <h2 id="about">Haqqımızda</h2>
+                <p>Bu platforma, Azərbaycanın rayonlarının unikal təbiəti, köhnə tarixi, yeni mədəniyyəti və turizm potensialını tanıtmaq ehtimalı var. Saytımızdakı hər rayonun ən maraqlı xüsusiyyətləri, görməli yerləri, səyahət təklifləri və tarixi mirası haqqında məlumat əldə edə, öz səfər planını əldə edə bilərsiniz.</p>
+            </div>
+            <div class="about2">
+                <h3><i>Niyə bizi seçməlisiniz?</i></h3>
+                <ol>
+                    <li>Azərbaycanın gözəlliklərini ətraflı araşdırmaq üçün əvəzolunmaz bir mənbəyik.</li>
+                    <li>Hər bir rayon haqqında dəqiq və təsirli məlumat təqdim edirik.
+                    </li>
+                    <li>Sizi virtual səyahətə çıxararaq, ölkəmizi yenidən sevməyə dəvət edirik.
+                    </li>
+                </ol>
+                <p>Burada Azərbaycanın unikal irsini birlikdə araşdırır, qəlblərdə unudulmaz səyahət təəssüratları yaradırıq. Gəlin, bu möhtəşəm səyahətə birlikdə çıxaq!</p>
+            </div>
+            
+        </section>
+        <section>
+            <p class="section2-p1">hara getmək <i>istəyirsiniz</i></p>
+            <div class="section2">
+                <button class="left">←</button>
+                <div class="section2-images">
+                <div data-id="baku">
+                    <img src="./Images/baku.png.crdownload" alt="">
+                    <p>Bakı</p>
+                     <button class="like">🤍</button>
+                     <button class="like1">❤️</button>
+                        <span class="hover-div">
+                            <h2>Bakı</h2>
+                            <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./baku/">Daha ətraflı</a></p>
+                        </span>
+                </div>
+                <div data-id="nakhchivan">
+                    <img src="./Images/nax.png" alt="">
+                    <p>Naxçıvan</p>
+                    <div class="like-buttons"></div>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Naxçıvan</h2>
+                        <p>Naxçıvan təbiəti,  gözoxşayan mənzərələri və özünəməxsus mətbəxi ilə ölkəmizin digər bölgələrindən tamamilə fərqlənir. Burada qədim insan məskənlərini, müxtəlif əsrlərə aid tarixi abidələri ziyarət etmək olar. Naxçıvanda sonsuz sayda sirlər və əfsanələr mövcuddur.<a href="./Nakchvan/">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="gabala">
+                    <img src="./Images/gabala.png" alt="">
+                    <p>Qəbələ</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                        <span class="hover-div">
+                            <h2>Qəbələ</h2>
+                            <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./gabala/">Daha ətraflı</a></p>
+                        </span>
+                </div>
+                <div data-id="guba">
+                    <img src="./Images/guba.png.crdownload" alt="">
+                    <p>Quba</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                        <span class="hover-div">
+                            <h2>Quba</h2>
+                            <p>Quba – əzəmətli Qafqaz dağlarına açılan qapıdır. Ekoturizm və açıq hava fəaliyyətlərinə üstünlük verənlər üçün Quba mükəmməl seçimdir.<a href="./Quba/">Daha ətraflı</a></p>
+                        </span>
+                </div>
+                <div data-id="qusar">
+                    <img src="./Images/gusar.png" alt="">
+                    <p>Qusar</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Qusar</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./Qusar/">Daha ətraflı</a></p>
+                    </span>
+
+                </div>
+                <div data-id="ismayilli">
+                    <img src="./Images/ismaili.png" alt="">
+                    <p>İsmayıllı</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>İsmayıllı</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./İsmayillı/">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="shaki">
+                    <img src="./Images/shaki.png" alt="">
+                    <p>Şəki</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Şəki</h2>
+                        <p>Şəki – qədim İpək Yolu üzərində yerləşən və heyrətamiz memarlığı, ləzzətli yeməkləri və mehriban insanları ilə tanınan əsl şərq şəhəridir. Şəki bu gün də sanki orta əsrlərə xas cazibəsini qoruyur.<a href="./Şəki/">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="shamakhi">
+                    <img src="./Images/shamaxi.png" alt="">
+                    <p>Şamaxı</p> <!-- Buradakı </p> bağlaması lazımdır -->
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Şamanxı</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./Şamaxı/">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="khizi">
+                    <img src="./Images/xızı.png" alt="">
+                    <p>Xızı</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Xızı</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./Xızı/">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="goygol">
+                    <img src="./Images/bluelake.png" alt="">
+                    <p>Göygöl</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Göygöl</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="gakh">
+                    <img src="./Images/gax.png" alt="">
+                    <p>Qax</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Qax</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="lenkeran">
+                    <img src="./Images/lankaran.png" alt="">
+                    <p>Lənkəran</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Lənkəran</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="">Daha ətraflı</a></p>
+                    </span>
+                </div>
+                <div data-id="karabakh">
+                    <img src="./Images/garabag.png" alt="">
+                    <p>Qarabağ</p>
+                    <button class="like">🤍</button>
+                    <button class="like1">❤️</button>
+                    <span class="hover-div">
+                        <h2>Qarabağ</h2>
+                        <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="">Daha ətraflı</a></p>
+                    </span>
+                </div>
+            </div>
+            <button class="right">→</button>
+        </div>
+        <div class="about">
+            <img src="./Images/rewiev.gif" alt="">
+            <h2 id="about" class="review">Müştəri rəyləri</h2>
+            <p class="review-p">Müştəri rəyləri bizim üçün çox önəmlidir. Məqsədimiz, onlara bölgələr haqqında ətraflı məlumat təqdim edərək səyahətlərini daha yaxşı planlaşdırmalarına kömək etməkdir. Müştərilərimizin fikirləri, göstərdiyimiz xidmətlərin keyfiyyətini artırmaq və fərdi ehtiyaclara uyğun təcrübə yaratmaq üçün əsas rol oynayır."<a href="./review/index.html">Daha çox</a></a></p>
+        </div>
+        
+    </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Azərbaycan Turizm Bürosu</h3>
+                <p>Azərbaycanın zəngin mədəni irsi, təbiət möcüzələri və turizm imkanlarını dünya ilə paylaşmaq üçün buradayıq.</p>
+                <p><strong>Email:</strong> info@azerbaijanturism.az</p>
+                <p><strong>Telefon:</strong> +994 00 123 45 60</p>
+            </div>
+            <div class="footer-links">
+                <h3>Tez keçidlər</h3>
+                <ul>
+                <li><a href="../index.html#about1">Haqqımızda</a></li>
+                <li><a href="#cities">Bölgələr</a></li>
+                <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                <li><a href="../review/index.html">Rəylər</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Bizi izləyin</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/?locale=az_AZ"><img src="./Images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="./Images/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/"><img src="./Images/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/"><img src="./Images/youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

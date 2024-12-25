@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şamanxı</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>       
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../baku/style.css">
+</head>
+<body>
+        <header>
+            <div class="first-title">
+                <p id="cities">Azərbaycan Turizm Bürosu</p>
+                <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+                <div class="burger-menu" >
+                    <ul>
+                        <li><a href="" class="home1">Ana səhifə</a></li>
+                        <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
+                        <li id="mapTrigger1">Rəqəmsal Xəritə</li>
+    
+                    </ul>
+                    <div class="district1">
+                        <ul>
+                            <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="mapContainer" ></div>
+            <div id="map-modal" class="modal">
+                <span class="close" id="close-modal">X</span>
+            </div>
+                <div class="second-title">
+                    <ul>
+                        <li><a href="" class="home">Ana səhifə</a></li>
+                        <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
+                        <li id="mapTrigger">Rəqəmsal Xəritə</li>
+    
+                    </ul>
+                    <div class="district" style="display: none;">
+                        <ul>
+                            <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                        </ul>
+                    </div>
+                    <div class="register-section">
+                        <img src="../Images/user.png" alt="User Icon" class="user-icon">
+                        <a href="../register.html" class="register-link">Qeydiyyat</a>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Axtarış edin...">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="favorite-icon">
+                        <img src="../Images/heart.png" alt="">
+                    </div>
+                </div>
+            </header> 
+    
+        <main>
+            <section class="main-part">
+                <img src="../Images/shamaxi.png" alt="" class="backgroundimage">
+                <p class="name">Şamaxı</p>
+                <i>şairlər diyarı</i>
+                <p class="information">Şirvanşahlar dövlətinin uzun müddət paytaxtı olmuş Şamaxı bu gün də keçmiş əzəməti və təbii gözəllikləri ilə heyran edir.</p>
+            </section>
+            <section class="main-part2">
+                <h2>Gözoxşayan mənzərələr və əsrarəngiz poeziya</h2>
+                <p>Şamaxı Azərbaycanın ən qədim və tarixi şəhərlərindən biri, həmçinin Sabir və Nəsimi kimi dahi Azərbaycan şairlərinin vətənidir. İşğallar və zəlzələlər nəticəsində qədim şəhər dağıntılara məruz qalmışdır. Şamaxı Cümə məscidi Qafqazda tikilən ikinci, Azərbaycanın isə ilk məscidi olsa da, dəfələrlə hücumlara məruz qaldığı üçün yenidən bərpa edilmişdir. Bundan əlavə, Şamaxıda ulduzları izləyə, dadlı şərablardan zövq ala və bir-birindən gözəl kəndlərdə haykinq edə bilərsiniz.</p>
+            </section>
+            <section class="main-part3">
+                <h2 class="fact">Maraqlı faktlar</h2>
+                <div class="interesting-facts">
+                <div class="interesting-fact">
+                    <img src="../Images/shamaki1.png" alt="">
+                    <h2>Qədim Paytaxt</h2>
+                    <p>Şamaxı qədim dövrlərdə Şirvanşahlar dövlətinin paytaxtı olub və Azərbaycanın ən qədim şəhərlərindən biridir. Şəhərin tarixi təxminən 2500 il əvvələ gedib çıxır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/ShamakhiObservatory.png" alt="">
+                    <h2>Şamaxı Rəsədxanası</h2>
+                    <p>Şamaxı, Azərbaycanın ən böyük astronomik mərkəzlərindən biri olan Nəsirəddin Tusi adına Şamaxı Astrofizika Rəsədxanası ilə tanınır. Burada ölkənin ən güclü teleskoplarından biri yerləşir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/SevenDomeTombs.png" alt="">
+                    <h2>Yeddi Günbəz Türbələri</h2>
+                    <p>Şamaxıda yerləşən Yeddi Günbəz kompleksi Şirvanşahlar sülaləsinə aid olan türbələrdən ibarətdir. Bu türbələr şəhərin tarixi-memarlıq abidələrindən biridir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/faint.png" alt="">
+                    <h2>Təbii Fəlakətlər Tarixi</h2>
+                    <p>Şamaxı tarixi boyu güclü zəlzələlərlə üzləşib. 1667-ci ildə baş vermiş zəlzələ nəticəsində şəhərin böyük hissəsi dağılıb və minlərlə insan həyatını itirib.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/wine.png" alt="">
+                    <h2>Şamaxı Şərabı</h2>
+                    <p>Şamaxı üzümçülük və şərabçılıqla məşhurdur. Şamaxı şərabları yüksək keyfiyyətli olmaqla yerli və beynəlxalq bazarlarda məşhurdur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/poem.png" alt="">
+                    <h2>Şairlərin Beşiyi</h2>
+                    <p>Şamaxı Nizami Gəncəvinin dostu olan məşhur şair İmadəddin Nəsiminin də vətənidir. Bu şəhər klassik Azərbaycan poeziyasının inkişafında böyük rol oynayıb.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/FridayMosque.png" alt="">
+                    <h2>Şamaxı Məscidləri</h2>
+                    <p>Şamaxının Cümə Məscidi Qafqazın ən qədim məscidlərindən biridir. Bu məscid VIII əsrdə tikilmişdir və İslam memarlığının möhtəşəm nümunəsidir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="../Images/reserve.png" alt="">
+                    <h2>Şirvan Milli Parkı</h2>
+                    <p>Şamaxı yaxınlığında yerləşən Şirvan Milli Parkı nadir quş növlərinin müşahidə edilməsi üçün məşhur bir yerdir. Burada təbiətsevərlər üçün yürüşlər və turlar təşkil olunur.</p>
+                </div>
+            </div>
+            </section>
+            <div id="scroll-to-top" class="scroll-to-top">↑</div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>Azərbaycan Turizm Bürosu</h3>
+                    <p>Azərbaycanın zəngin mədəni irsi, təbiət möcüzələri və turizm imkanlarını dünya ilə paylaşmaq üçün buradayıq.</p>
+                    <p><strong>Email:</strong> info@azerbaijanturism.az</p>
+                    <p><strong>Telefon:</strong> +994 00 123 45 60</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tez keçidlər</h3>
+                    <ul>
+                    <li><a href="../index.html#about1">Haqqımızda</a></li>
+                    <li><a href="#cities">Bölgələr</a></li>
+                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi izləyin</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/?locale=az_AZ"><img src="../Images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
+                        <a href="https://x.com/"><img src="../Images/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/"><img src="../Images/youtube.png" alt="YouTube"></a>
+                    </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+            </div>
+        </footer>
+        <script src="../baku/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qusar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../baku/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="first-title">
+            <p id="cities">Azərbaycan Turizm Bürosu</p>
+            <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+            <div class="burger-menu" >
+                <ul>
+                    <li><a href="" class="home1">Ana səhifə</a></li>
+                    <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
+                    <li id="mapTrigger1">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district1">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mapContainer" ></div>
+        <div id="map-modal" class="modal">
+            <span class="close" id="close-modal">X</span>
+        </div>
+            <div class="second-title">
+                <ul>
+                    <li><a href="" class="home">Ana səhifə</a></li>
+                    <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
+                    <li id="mapTrigger">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district" style="display: none;">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+                <div class="register-section">
+                    <img src="../Images/user.png" alt="User Icon" class="user-icon">
+                    <a href="../register.html" class="register-link">Qeydiyyat</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Axtarış edin...">
+                    <div id="search-results"></div>
+                </div>
+                <div id="favorite-icon">
+                    <img src="../Images/heart.png" alt="">
+                </div>
+                
+            </div>
+        </header> 
+        <main>
+            <section class="main-part">
+                <img src="./gusar1.png" alt="" class="backgroundimage">
+                <p class="name">Qusar</p>
+                <i>qürurlu zirvələr</i>
+                <p class="information">Azərbaycanın “şimal qapısı” ölkənin ən hündür zirvələri, yüksək səviyyəli dağ-xizək kurortu, gözəl dağ kəndləri və ləzzətli ləzgi mətbəxi və bütün bunları özündə birləşdirən Qafqaz dağlarının heyranedici təbiəti ilə seçilir.</p>
+            </section>
+            <section class="main-part2">
+                <h2>Xizək sürmək, alpinizm və daha nələr</h2>
+                <p>Qusar Azərbaycanın şimal-şərqində yerləşir və Dağıstanla həmsərhəddir. Ərazisinin əksəriyyəti valehedici dağlardan ibarətdir. Adını hündürlüyü 4243 metr olan məşhur Şahdağ zirvəsindən alan Azərbaycanın ilk dağ-xizək kurortu –  “Şahdağ” Turizm Mərkəzi Qusarda yerləşir.  Yaxınlıqda isə saatlarla haykinq etmək istəyənlər üçün gözoxşayan mənzərələrlə əhatə olunmuş gözəl Laza kəndi  yerləşir. Yerli əhalinin əksəriyyətini Qafqaz dağlarında yaşayan ləzgilər təşkil edir. Onların ənənəvi mətbəxini də dadmağa dəyər.</p>
+            </section>
+            <section class="main-part3">
+                <h2 class="fact">Maraqlı faktlar</h2>
+                <div class="interesting-facts">
+                <div class="interesting-fact">
+                    <img src="./Shahdag-tourism.png" alt="">
+                    <h2>Şahdağ Turizm Kompleksi</h2>
+                    <p>Qusar rayonu Şahdağ Milli Parkının yerləşdiyi məkandır. Burada yerləşən Şahdağ Turizm Mərkəzi, qış idman növləri və yay turizmi üçün məşhur bir yerdir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./gusarchay.png" alt="">
+                    <h2>Qusarçay</h2>
+                    <p>Rayonun ərazisindən axan Qusarçay həm yerli kənd təsərrüfatı, həm də turistik ərazilər üçün önəmlidir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./cold-climate.png" alt="">
+                    <h2>Dağlıq relyef</h2>
+                    <p>Qusarın böyük hissəsi dağlıq ərazidə yerləşir və dəniz səviyyəsindən 4463 metrə qədər yüksələn zirvələri ilə tanınır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./gusar2.png" alt="">
+                    <h2>Etnoqrafik zənginlik</h2>
+                    <p> Rayon əhalisinin böyük hissəsini ləzgilər təşkil edir, bu da rayonda zəngin ləzgi mədəniyyətini və ənənələrini yaşadır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./mountainous.png" alt="">
+                    <h2>Soyuq iqlim</h2>
+                    <p>Qusar Azərbaycanın ən soyuq rayonlarından biridir. Xüsusilə qış aylarında buradakı hava temperaturu mənfi 20 dərəcəyə qədər enə bilər.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./laza.png" alt="">
+                    <h2>Laza kəndi</h2>
+                    <p> Qusarın Laza kəndi, öz təbii gözəllikləri, şəlalələri və dağ mənzərələri ilə məşhurdur. Həmçinin trekking və alpinistlər üçün ideal bir məkandır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./gusar3.png" alt="">
+                    <h2>Qafqazın ən hündür zirvələri</h2>
+                    <p>Qusar rayonu, Qafqaz dağlarının ən yüksək zirvələrindən bir neçəsinə ev sahibliyi edir və dağ turizmi üçün ideal bir məkandır.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./apple-gusar.png" alt="">
+                    <h2>Alma bağları</h2>
+                    <p>Qusar alması ilə də məşhurdur. Burada yetişən alma növləri dadı və keyfiyyəti ilə seçilir.</p>
+                </div>
+            </div>
+            </section>
+            <div id="scroll-to-top" class="scroll-to-top">↑</div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>Azərbaycan Turizm Bürosu</h3>
+                    <p>Azərbaycanın zəngin mədəni irsi, təbiət möcüzələri və turizm imkanlarını dünya ilə paylaşmaq üçün buradayıq.</p>
+                    <p><strong>Email:</strong> info@azerbaijanturism.az</p>
+                    <p><strong>Telefon:</strong> +994 00 123 45 60</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tez keçidlər</h3>
+                    <ul>
+                    <li><a href="../index.html#about1">Haqqımızda</a></li>
+                    <li><a href="#cities">Bölgələr</a></li>
+                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                    <li><a href="../review/index.html">Rəylər</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi izləyin</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/?locale=az_AZ"><img src="../Images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
+                        <a href="https://x.com/"><img src="../Images/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/"><img src="../Images/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+            </div>
+        </footer>
+    <script src="../baku/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qeydiyyat</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Qeydiyyat</h1>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link"> 🠔Əsas Səhifə</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <section class="register-section">
+            <h2 class="register-title">Yeni Hesab Yaradın</h2>
+            <form id="registerForm" class="register-form">
+                <label for="username" class="form-label">İstifadəçi adı:</label>
+                <input type="text" id="username" name="username" class="form-input" required>
+            
+                <label for="email" class="form-label">E-poçt:</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            
+                <label for="password" class="form-label">Şifrə:</label>
+                <input type="password" id="password" name="password" class="form-input" required>
+            
+                <label for="confirm-password" class="form-label">Şifrəni Təkrarlayın:</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-input" required>
+            
+                <button type="submit" class="submit-button">Qeydiyyatdan Keç</button>
+            </form>
+            
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer-text">© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="register.js" defer></script>
+</body>
+</html>

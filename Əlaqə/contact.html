@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Azerbaijan Turizm Bürosu - Əlaqə</title>
+    <link rel="stylesheet" href="./contact.css"> <!-- Burada öz stil faylınızı bağlayın -->
+</head>
+<body>
+
+    <!-- Əlaqə Bölməsi -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Əlaqə</h2>
+            <p>Bizimlə əlaqə saxlamaq üçün aşağıdakı formu doldurun və ya bizimlə birbaşa əlaqə qurun:</p>
+            <div class="contact-details">
+                <!-- Əlaqə Məlumatları -->
+                <div class="contact-info">
+                    <h3>Əlaqə məlumatları</h3>
+                    <ul>
+                        <li><strong>Email:</strong> info@azerbaijanturizm.az</li>
+                        <li><strong>Telefon:</strong> +994 00 123 45 60</li>
+                        <li><strong>Ünvan:</strong> Bakı, Azərbaycan</li>
+                    </ul>
+                </div>
+                
+                <!-- Əlaqə Formu -->
+                <div class="contact-form">
+                    <h3>Bizə yazın</h3>
+                    <form>
+                        <!-- İstifadəçi adı daxil etmək üçün input -->
+                        <input type="text" id="name" name="name" placeholder="Adınız" required>
+                        
+                        <!-- İstifadəçi e-poçt ünvanı daxil etmək üçün input -->
+                        <input type="email" id="email" name="email" placeholder="E-poçt" required>
+                        
+                        <!-- İstifadəçi mesajını yazması üçün textarea -->
+                        <textarea id="message" name="message" placeholder="Mesajınız" required></textarea>
+                        
+                        <!-- Mesajı göndərmək üçün düymə -->
+                        <button type="submit">Göndər</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baku</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>       
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="first-title">
+            <p id="cities">Azərbaycan Turizm Bürosu</p>
+            <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+            <div class="burger-menu" >
+                <ul>
+                    <li><a href="" class="home1">Ana səhifə</a></li>
+                    <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
+                    <li id="mapTrigger1">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district1">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mapContainer" ></div>
+        <div id="map-modal" class="modal">
+            <span class="close" id="close-modal">X</span>
+        </div>
+            <div class="second-title">
+                <ul>
+                    <li><a href="" class="home">Ana səhifə</a></li>
+                    <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
+                    <li id="mapTrigger">Rəqəmsal Xəritə</li>
+
+                </ul>
+                <div class="district">
+                    <ul>
+                        <li><a href="../baku/">Bakı</a></li>
+                        <li><a href="../Nakchvan/">Naxçıvan</a></li>
+                        <li><a href="../gabala/">Qəbələ</a></li>
+                        <li><a href="../Quba/">Quba</a></li>
+                        <li><a href="../Qusar/">Qusar</a></li>
+                        <li><a href="../İsmayillı/">İsmayıllı</a></li>
+                        <li><a href="../Şəki/">Şəki</a></li>
+                        <li><a href="../Şamaxı/">Şamaxı</a></li>
+                        <li><a href="../slide1/">Göygöl</a></li>
+                        <li><a href="../Xızı/">Xızı</a></li>
+                        <li><a href="../slide5/">Qarabağ</a></li>
+                    </ul>
+                </div>
+                <div class="register-section">
+                    <img src="../Images/user.png" alt="User Icon" class="user-icon">
+                    <a href="../register.html" class="register-link">Qeydiyyat</a>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Axtarış edin...">
+                    <div id="search-results"></div>
+                </div>
+                <div id="favorite-icon">
+                    <img src="../Images/heart.png" alt="">
+                </div>
+                
+            </div>
+        </header> 
+    
+        <main>
+            <section class="main-part">
+                <img src="./tower.png" alt="" class="backgroundimage">
+                <p class="name">Bakı</p>
+                <i>Küləklər şəhəri</i>
+                <p class="information">Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.</p>
+            </section>
+            <section class="main-part2">
+                <h2>Şərq və Qərbin qovuşduğu diyar</h2>
+                <p>Bakıda hər kəs zövqünə uyğun əyləncə, istirahət və maraq dairəsi tapa bilər. Şərq bazarları, gecə həyatı, qədim abidələr, müasir binalar əsl harmoniya yaradır. Xəzər dənizinin sahillərində yerləşən Bakı il boyu maraqlıdır. Yayda çimərliklərə, qışda isə hamamlar və SPA mərkəzlərinə üz tuta bilərsiniz. Yazda parklar və bulvarda gəzişərək, payızda isə muzeyləri ziyarət edərək şəhərimizi doyunca yaşaya bilərsiniz.</p>
+            </section>
+            <section class="main-part3">
+                <h2 class="fact">Maraqlı faktlar</h2>
+                <div class="interesting-facts">
+                <div class="interesting-fact">
+                    <img src="./baku.png" alt="">
+                    <h2>Ən aşağı paytaxt</h2>
+                    <p>Bakı dəniz səviyyəsindən 28 metr aşağıda yerləşir və bu, onu dünyanın ən aşağıda yerləşən paytaxtı edir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./citywindsbaku.png" alt="">
+                    <h2>Küləklər şəhəri</h2>
+                    <p>Bakı "küləklər şəhəri" kimi tanınır. "Xəzri" və "Gilavar" adlı küləklər burada ilin əksər vaxtı təsirli olur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./cradleoilindustry.png" alt="">
+                    <h2>Neft beşiyi</h2>
+                    <p>Bakı 19-cu əsrdə sənaye üsulu ilə neft çıxarılan ilk şəhərlərdən biridir. Hətta Nobel qardaşları öz sərvətlərinin böyük bir hissəsini Bakıda qazandılar</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./flameTowers.png" alt="">
+                    <h2>Alov Qüllələri</h2>
+                    <p>Bakının müasir simvollarından biri olan Alov Qüllələri, şəhərin qədim "odlar yurdu" statusuna istinad edir və gecələr parlaq işıqlandırması ilə diqqət çəkir.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./maidenTower.png" alt="">
+                    <h2>Qız Qalası</h2>
+                    <p>Qız Qalası Bakının tarixi mərkəzində yerləşən, tam mənası ilə sirlərlə dolu bir abidədir. Onun dəqiq inşa tarixi və məqsədi haqqında hələ də dəqiq məlumat yoxdur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./firepit.png" alt="">
+                    <h2>Atəşgah</h2>
+                    <p>Suraxanı Atəşgahı, qədim Zərdüştlərin ibadət yeri olub. Bu məbəd, təbii qazın sızması nəticəsində yaranan yanan alovları ilə məşhurdur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./kaspian.png" alt="">
+                    <h2>Ən böyük şəhəri</h2>
+                    <p>Bakı Xəzər dənizi sahillərində yerləşən ən böyük şəhərdir və həmçinin bölgənin iqtisadi, mədəni və siyasi mərkəzi hesab olunur.</p>
+                </div>
+                <div class="interesting-fact">
+                    <img src="./architecturalharmony.png" alt="">
+                    <h2>Memarlıq harmoniyası</h2>
+                    <p>Bakı köhnə və müasir memarlığı birləşdirən unikal şəhərlərdən biridir. İçərişəhərin qədim dar küçələri və Heydər Əliyev Mərkəzinin futuristik dizaynı buna əyani nümunədir.</p>
+                </div>
+            </div>
+            </section>
+            <!-- Oxu göstərmək üçün div əlavə edin -->
+                <div id="scroll-to-top" class="scroll-to-top">↑</div>
+
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>Azərbaycan Turizm Bürosu</h3>
+                    <p>Azərbaycanın zəngin mədəni irsi, təbiət möcüzələri və turizm imkanlarını dünya ilə paylaşmaq üçün buradayıq.</p>
+                    <p><strong>Email:</strong> info@azerbaijanturism.az</p>
+                    <p><strong>Telefon:</strong> +994 00 123 45 60</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tez keçidlər</h3>
+                    <ul>
+                    <li><a href="../index.html#about1">Haqqımızda</a></li>
+                    <li><a href="#cities">Bölgələr</a></li>
+                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Bizi izləyin</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/?locale=az_AZ"><img src="../Images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="../Images/instagram.png" alt="Instagram"></a>
+                        <a href="https://x.com/"><img src="../Images/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/"><img src="../Images/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
+            </div>
+        </footer>
+        <script src="index.js"></script>
+
+</body>
+</html>

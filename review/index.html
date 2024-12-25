@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müştəri Rəyləri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Müştəri Rəyləri</h1>
+
+    <div class="review-form">
+      <textarea id="review-input" placeholder="Rəyinizi yazın..." rows="4"></textarea>
+      <button onclick="addReview()">Rəy əlavə et</button>
+    </div>
+
+    <div class="reviews">
+      <h2>Digər Müştərilərin Rəyləri</h2>
+      <div id="reviews-list" class="reviews-list"></div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
