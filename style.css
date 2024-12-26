@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
 }
-
 .first-title {
     display: flex;
     padding: 10px;
@@ -12,22 +11,15 @@
     background-color: #767878;
     color: white;
 }
-
 .map {
     width: 20px;
     margin-left: 70%;
     margin-right: 15px;
 }
-
-
-
 .src {
     width: 20px;
 }
-
-
 .second-title ul li {
-
     font-weight: bold;
 }
 .link:hover{
@@ -40,14 +32,12 @@
     overflow: hidden;
     display: flex;
 }
-
 .slide {
     position: relative;
     width: 100%;
     height: 100%;
     flex-shrink: 0;
 }
-
 .photo {
     width: 100%;
     height: 100%;
@@ -56,16 +46,16 @@
 }
 .district {
     position: absolute;
-    top: 100px; /* Ana səhifədən müəyyən məsafədə */
+    top: 100px; 
     left: 0;
-    width: 20%; /* Divin eni */
-    background-color: #fff; /* Arxa fon rəngi */
+    width: 20%; 
+    background-color: #fff;
     padding: 7px;
-    display: none; /* İlk başda gizli olsun */
-    z-index: 10; /* Digər elementlərdən üstün olsun */
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Gözəl kölgə effekti */
-    border-radius: 8px; /* Küncləri yuvarlaqlaşdırmaq */
-    transition: transform 0.3s ease-in-out; /* Divin animasiyasını əlavə edirik */
+    display: none; 
+    z-index: 10; 
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+    transition: transform 0.3s ease-in-out; 
     max-height: 400px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -79,17 +69,14 @@
 .district ul {
     display: flex;
     flex-direction: column;
-    padding: 0; /* Listənin əvvəlki paddinglərini sıfırlayır */
-    margin: 0; /* Listənin əvvəlki marginlərini sıfırlayır */
+    padding: 0; 
+    margin: 0;
 }
-
 .district li {
-    margin: 5px 0; /* Üst və alt tərəfdən 5px boşluq əlavə edir, daha az məsafə */
-    text-align: center; /* Mətni mərkəzləşdirir */
+    margin: 5px 0;
+    text-align: center; 
     font-size: 17px;
 }
-
-
 .slide-text {
     position: absolute;
     top: 40%; 
@@ -102,8 +89,6 @@
     animation: textAnimation 15s infinite ease-in-out;
     z-index: 1; 
 }
-
-
 .link-slide {
     display: inline-block;
     color: red;
@@ -111,9 +96,6 @@
     text-decoration: none;
     border-radius: 5px;
 }
-
-
-
 .about {
     height: 500px;
     display: flex;
@@ -124,13 +106,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
   .about img {
     width: 30%;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
-  
   .about h2 {
     font-size: 60px;
     color: #333;
@@ -139,14 +119,12 @@
     margin-top: -20%;
     margin-left: 13%;
   }
-  
   .about p {
     font-size: 20px;
     color: #555;
     line-height: 1.8;
     max-width: 50%;
   }
-  
  .about2 {
     margin-top: 50px;
     padding: 80px;
@@ -155,12 +133,10 @@
     transition: transform 0.3s ease-in-out;
     margin-bottom: 50px;
 }
-
 .about2:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
-
 .about2 h3 {
     font-size: 40px;
     color: #1a237e;
@@ -170,13 +146,11 @@
     letter-spacing: 2px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-
 .about2 ol {
     color: #333;
     margin: 20px 0;
     padding-left: 20px;
 }
-
 .about2 ol li {
     margin-top: 20px;
     font-size: 20px;
@@ -187,12 +161,10 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
 .about2 ol li:hover {
     background-color: #e8f5e9;
     transform: scale(1.03);
 }
-
 .about2 p {
     font-size: 18px;
     color: #555;
@@ -201,7 +173,6 @@
     max-width: 90%;
 
 }
-
 .about2 p::first-letter {
     font-size: 25px;
     font-weight: bold;
@@ -211,7 +182,6 @@
     position: relative;
     
 }
-
 .like {
     position: absolute;
     font-size: 20px;
@@ -245,13 +215,6 @@
     display: none;
     background-color: white;
 }
-
-/* .like:hover {
-    transform: scale(1.2); 
-    z-index: 3;
-} */
-
-  
 @keyframes slideAnimation {
     0%, 16% {
         transform: translateX(0);
@@ -269,32 +232,23 @@
         transform: translateX(-400%);
     }
 }
-/* .likeNone{
-    display: none;
-} */
 @keyframes textAnimation {
     0%, 16% {
         transform: translateX(0);
-
     }
     21%, 37% {
         transform: translateX(-100%);
-
     }
     42%, 58% {
         transform: translateX(-200%);
-
     }
     63%, 79% {
         transform: translateX(-300%);
-
     }
     84%,95% {
         transform: translateX(-400%);
-
     }
 }
-
 .indicators {
     position: relative;
     left: 50%;
@@ -303,7 +257,6 @@
     gap: 10px;
     justify-content: center;
 }
-
 .dot {
     width: 15px;
     height: 15px;
@@ -311,32 +264,26 @@
     background-color: lightgray;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .dot:nth-child(1) {
     animation: dotAnimation 15s infinite ease-in-out;
     animation-delay: 0s;
 }
-
 .dot:nth-child(2) {
     animation: dotAnimation 15s infinite ease-in-out;
     animation-delay: 3s;
 }
-
 .dot:nth-child(3) {
     animation: dotAnimation 15s infinite ease-in-out;
     animation-delay: 6s;
 }
-
 .dot:nth-child(4) {
     animation: dotAnimation 15s infinite ease-in-out;
     animation-delay: 9s;
 }
-
 .dot:nth-child(5) {
     animation: dotAnimation 15s infinite ease-in-out;
     animation-delay: 12s;
 }
-
 @keyframes dotAnimation {
     0%, 19% {
         background-color: darkblue;
@@ -371,7 +318,6 @@
     position: relative; 
     margin: 20px 0;
 }
-
 .section2-images div {
     flex: 0 0 calc(25% - 10px); 
     box-sizing: border-box;
@@ -380,7 +326,6 @@
     border-radius: 10px; 
     transition: transform 0.3s ease-in-out;
 }
-
 .section2-images div img {
     width: 100%;
     height: 100%;
@@ -398,35 +343,28 @@
     z-index: 1; 
     margin-top: 7%;
 }
-
 .left {
     margin-left: 3px; 
 }
-
 .right {
     margin-right:5px;
 }
-
 .section2-images {
     display: flex;
     overflow: hidden; 
     width: 94%; 
     gap: 13px;
 }
-
 .section2-images div:hover img {
     transform: scale(1.2); 
     opacity: 0.7; 
     transition: all 0.5s ease-in-out;
 }
-
 .section2-images div:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
     transform: scale(1.05); 
     transition: all 0.3s ease-in-out;
 }
-
-
 .section2-images div::before {
     content: ""; 
     position: absolute;
@@ -439,11 +377,9 @@
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
 }
-
 .section2-images div:hover::before {
     opacity: 1; 
 }
-
 .section2-images div:hover img {
     z-index: 0; 
 }
@@ -457,14 +393,9 @@
     padding: 5px;
     border-radius: 5px;
 }
-
 .section2-images div:hover p {
     opacity: 0;
 }
-/* .section2-images div:hover .like { 
-    display: block;
-} */
-/* hover zamanı span'ı gizləmək */
 .hover-div {
     display: none;
     position: absolute;
@@ -497,12 +428,10 @@
 .hover-div p a{
     color: yellow;
 }
-
 .section2-images div:hover .hover-div {
     display: flex;
     opacity: 1;
 }
-
 .section2-images div:hover .hover-div p {
     opacity: 1;
     font-size: 18px; 
@@ -513,8 +442,6 @@
     font-size: 24px; 
     padding-top: -22px;
 }
-
-
 .section2-images div:hover .hover-div p {
     opacity: 1;
 }
@@ -524,7 +451,6 @@ footer {
     padding: 40px 20px;
     font-family: 'Josefin Sans', sans-serif;
 }
-
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -533,54 +459,42 @@ footer {
     margin: 0 auto;
     gap: 20px;
 }
-
 .footer-about, .footer-links, .footer-social {
     flex: 1 1 300px;
 }
-
 .footer-about h3, .footer-links h3, .footer-social h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
     color: #f9a826;
 }
-
 .footer-about p, .footer-links ul {
     font-size: 1em;
     line-height: 1.6;
 }
-
 .footer-links ul {
     list-style: none;
     padding: 0;
 }
-
 .footer-links ul li {
     margin-bottom: 10px;
 }
-
 .footer-links ul li a {
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease;
 }
-
 .footer-links ul li a:hover {
     color: #f9a826;
 }
-
 .social-icons {
     display: flex;
     gap: 10px;
 }
-
 .social-icons a img {
     width: 32px;
     height: 32px;
 
 }
-
-
-
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
@@ -589,10 +503,9 @@ footer {
 .search-container {
     position: relative;
     width: 100%;
-    max-width: 300px; /* Maksimum en */
+    max-width: 300px; 
     margin: 20px auto;
 }
-
 #search-input {
     width: 100%;
     padding: 10px;
@@ -603,12 +516,10 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
 }
-
 #search-input:focus {
     border-color: #f9a826;
     outline: none;
 }
-
 #search-results {
     position: absolute;
     top: 100%;
@@ -624,17 +535,14 @@ footer {
     scrollbar-width: none;
     z-index: 4;
 }
-
 #search-results p {
     margin: 0;
     padding: 10px;
     cursor: pointer;
 }
-
 #search-results p:hover {
     background-color: #f0f0f0;
 }
-
 #search-results .result-item {
     padding: 10px;
     background-color: #f1f1f1;
@@ -645,22 +553,19 @@ footer {
     display: block;
     margin-bottom: 10px;
 }
-
 #search-results .result-item:hover {
     background-color: #e8f5e9;
 }
 .register-section {
     display: flex;
     align-items: center;
-    gap: 10px;  /* İkon ilə mətn arasındaki boşluğu müəyyən edir */
+    gap: 10px;  
 }
-
 .user-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
-
 .register-link {
     font-size: 16px;
     font-weight: bold;
@@ -668,7 +573,6 @@ footer {
     color: #333;
     transition: color 0.3s ease;
 }
-
 .register-link:hover {
     color: #007bff;
 }
@@ -677,35 +581,28 @@ footer {
      height: 640px; 
      display: none
 }
-/* İlkin görünüş üçün CSS */
 .first-title {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .map {
     width: 20px;
     height: 20px;
 }
-
 #mapTrigger {
     cursor: pointer;
 }
-
-/* Style for the modal */
 #map-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
 }
-
-/* Modal content */
 .modal-content {
     position: absolute;
     top: 50%;
@@ -716,8 +613,6 @@ footer {
     width: auto;
     height: auto;
 }
-
-/* Close button */
 .close {
     position: absolute;
     top:10px;
@@ -726,14 +621,10 @@ footer {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-
 }
 .close:hover{
 color:red;
 }
-
-
-
 .None{
     display: none;
 }
@@ -747,9 +638,7 @@ color:red;
     width: 25px;
     height: 25px;
     display: none;
-
 }
-
 @media (min-width:300px) and (max-width: 400px) {
     .second-title {
         align-items: center;
@@ -757,7 +646,6 @@ color:red;
         display: grid;
         grid-template-columns: repeat(5,1fr);
     }   
-  
     .map{
         margin-left: 18%;
         width: 13px;
@@ -767,37 +655,28 @@ color:red;
         height: 26px;
         margin-top: -25%;
     }
-
     .register-link {
         font-size: 10px;
         display: none;
     }
-    /* .register-section{
-        right: 0px;
-    } */
-
     .search-container {
         width: 80vw;
-        /* margin: 10px 0; */
         margin-top: -1%;
         margin-left: 2%;
     }
     #mapTrigger{
         margin-left: -13%;
     }
-
     #search-input {
         width: calc(100% - 20px);
         font-size: 12px;
         padding: 5px;
         margin-left: 2%;
     }
-
     #search-results {
         font-size: 10px;
         width: 76vw;
     }
-
     #favorite-icon {
         font-size: 16px;
         margin-top: -15px;
@@ -805,20 +684,18 @@ color:red;
     #favorite-icon img{
             width: 28px;
             height: 28px;
-            margin-top: 35%;
-        
+            margin-top: 35%; 
     }
     .first-title p {
         font-size: 12px !important;
     }
-  
     .first-title p:first-child {
         margin-left: 0;
     }
     .first-title{
         gap: 2px;
         display: grid;
-        grid-template-columns: 66.66% 33.33%; /* 2:1 nisbəti */
+        grid-template-columns: 66.66% 33.33%;
     }
     .second-title ul li {
         font-size: 3.4vw;
@@ -875,21 +752,20 @@ color:red;
         font-size: 8vw;
     }
     .section2-images div {
-        flex: 0 0 100%; /* Divin tam ekranda görünməsini təmin edir */
-        scroll-snap-align: center; /* Div tam mərkəzə hizalanır */
-
+        flex: 0 0 100%; 
+        scroll-snap-align: center; 
     }
     .section2-images {
-        display: flex; /* Divləri yan-yana düzür */
-        overflow-x: scroll; /* Yatay sürüşdürmə üçün */
+        display: flex; 
+        overflow-x: scroll; 
         scrollbar-width: none;
-        scroll-snap-type: x mandatory; /* Sürüşmə zamanı tam hizalama */
-        gap: 10px; /* Divlər arasında məsafə */
-        width: 100%; /* Konteynerin eni */
-        padding: 10px 4; /* Yuxarı və aşağı aralıq */
+        scroll-snap-type: x mandatory; 
+        gap: 10px; 
+        width: 100%; 
+        padding: 10px 4; 
     }
     .left, .right {
-        position: absolute; /* Oxları konteynerə uyğun yerləşdirir */
+        position: absolute; 
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba(0, 0, 0, 0.5);
@@ -902,13 +778,11 @@ color:red;
         font-size: 20px;
         z-index: 10;
     }
-    
     .left {
-        left: 10px; /* Solda yerləşdirir */
+        left: 10px; 
     }
-    
     .right {
-        right: 10px; /* Sağda yerləşdirir */
+        right: 10px; 
     }
     .hover-div h2{
         font-size: 28px !important;
@@ -917,29 +791,24 @@ color:red;
         font-size: 16px;
     }
     .second-title ul li {
-        display: none;
-        
+        display: none;   
     }
     .burger{
         display: block;
         width: 18px;
         margin-left: 80%;
-
     }
     .district{
         display: none;
     }
+    #weatherTrigger{
+        display: none;
+    }
 }
-
-
-
-
 @media (min-width: 401px) and (max-width: 671px) {
-
     .burger{
         display: block;
-        width: 18px;
-
+       width: 18px;
     }
     .district{
         display: none;
@@ -950,26 +819,21 @@ color:red;
         text-align: left;
         display: grid;
         grid-template-columns: repeat(5,1fr);
-    }  
-
-        
+    }      
     body,html{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
-    
     * {
         box-sizing: border-box;
     }
   .register-link{
     display: none;
   }
-
   .link{
     font-size: 2.5vw;
   }
- 
   #favorite-icon{
     font-size: 25px;
     margin-top: -20%;
@@ -998,7 +862,6 @@ color:red;
     height: 35px;
     margin-top: -6%;
   }
-
   .first-title{
     display: flex;
     flex-wrap: nowrap;
@@ -1014,7 +877,6 @@ color:red;
   .second-title ul li{
     display: none;
 }
-
   .about{
     min-height: 660px;
     display: grid;
@@ -1022,7 +884,6 @@ color:red;
     gap: 10px;
     padding: 10px;
   }
-  
   .about p{
     font-size: 4vw;
     max-width: 90vw;
@@ -1066,27 +927,25 @@ color:red;
 position: relative;
 margin-top: 2%;
 margin-bottom: 2%;
-
 }
 .section2-p1{
     font-size: 8vw;
 }
 .section2-images div {
-    flex: 0 0 100%; /* Divin tam ekranda görünməsini təmin edir */
-    scroll-snap-align: center; /* Div tam mərkəzə hizalanır */
-
+    flex: 0 0 100%; 
+    scroll-snap-align: center; 
 }
 .section2-images {
-    display: flex; /* Divləri yan-yana düzür */
-    overflow-x: scroll; /* Yatay sürüşdürmə üçün */
+    display: flex;
+    overflow-x: scroll;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory; /* Sürüşmə zamanı tam hizalama */
-    gap: 10px; /* Divlər arasında məsafə */
-    width: 100%; /* Konteynerin eni */
-    padding: 10px 4; /* Yuxarı və aşağı aralıq */
+    scroll-snap-type: x mandatory; 
+    gap: 10px; 
+    width: 100%; 
+    padding: 10px 4; 
 }
 .left, .right {
-    position: absolute; /* Oxları konteynerə uyğun yerləşdirir */
+    position: absolute; 
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
@@ -1099,15 +958,11 @@ margin-bottom: 2%;
     font-size: 20px;
     z-index: 10;
 }
-
-
-
 .left {
-    left: 10px; /* Solda yerləşdirir */
+    left: 10px;
 }
-
 .right {
-    right: 10px; /* Sağda yerləşdirir */
+    right: 10px; 
 }
 .hover-div h2{
     font-size: 32px !important;
@@ -1118,15 +973,11 @@ margin-bottom: 2%;
 .review-p{
     max-width: 92vw !important; 
    }
+   #weatherTrigger{
+    display: none;
+   }
 }
-
-
-
-
-
-
 @media (min-width: 671px) and (max-width: 877px) {
-
      .search-container{
         margin-top: -1%;
         z-index: 3;
@@ -1136,7 +987,6 @@ margin-bottom: 2%;
         width: 35px;
         height: 35px;
     }
-    
      #favorite-icon{
         z-index: 4;
         margin-left: 86%;
@@ -1149,35 +999,31 @@ margin-bottom: 2%;
         margin-top: 5%;
         margin-left: -39%;
     }
-
      #search-input{
         width: 76vw;
      }
      .second-title ul{
         margin-top: -1.5%;
      }
-   
      .register-section{
         position: absolute;
         right: 10px;
         top: 9%;
         margin-top: -2%;
      }
-     
      .about{
         display: flex;
         flex-direction: column;
      }
      .section2-images {
-        display: flex; /* Flexbox ilə divləri yan yana düzürük */
+        display: flex;
         overflow-x: scroll;
         scrollbar-width: none;
-        scroll-snap-type: x mandatory; /* Yatayda sıralama */
+        scroll-snap-type: x mandatory;
     }
-    
     .section2-images div {
-        flex: 0 0 50%; /* Hər bir divin genişliyini 50% edirik */
-        scroll-snap-align: start; /* Divlərin başlanğıcını hizalayır */
+        flex: 0 0 50%; 
+        scroll-snap-align: start; 
     }
     .hover-div h2{
         margin-top: -6%;
@@ -1186,13 +1032,11 @@ margin-bottom: 2%;
     .section2-images div:hover .hover-div p {
         font-size: 18px;
         margin-top: -8%;
-
     }
 .link-slide{
     font-size: 3vw;
 }
     .about{
-      
         gap: 10px;
         height: 660px;
       }
@@ -1233,14 +1077,8 @@ margin-bottom: 2%;
     }
     .register-link{
         font-size: 2.5vw !important;
-    }
-   
-    
-    
+    }  
 }
-
-
-
 .second-title ul {
     list-style-type: none;
      padding: 0; 
@@ -1248,9 +1086,7 @@ margin-bottom: 2%;
     display: flex; 
     gap: 3px;
     margin-left: 2% !important;
-
 }
-
 .second-title ul li {
     padding: 10px 15px; 
      background-color: #f5f5f5; 
@@ -1259,49 +1095,31 @@ margin-bottom: 2%;
     font-size: 16px; 
     cursor: pointer; 
 }
-
 .second-title ul li:hover {
-    background-color: #e0e0e0; /* Hover üçün fərqli rəng */
+    background-color: #e0e0e0;
     transform: scale(1.05);
 }
-
 .second-title ul li a {
     text-decoration: none;
     color: #333;
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 878px) and (max-width: 1250px) {
     .section2-images {
-        display: flex; /* Flexbox ilə divləri yan yana düzürük */
+        display: flex; 
         overflow-x: scroll;
         scrollbar-width: none;
-        scroll-snap-type: x mandatory; /* Yatayda sıralama */
-        width: 100%; /* Kapsayıcı konteynerin genişliyini tam edirik */
+        scroll-snap-type: x mandatory; 
+        width: 100%; 
     }
-    
     .section2-images div {
-        flex: 0 0 25%; /* Hər bir divin genişliyini 33.33% edirik */
-        scroll-snap-align: start; /* Divlərin başlanğıcını hizalayır */
+        flex: 0 0 25%; 
+        scroll-snap-align: start; 
     }
 
     .hover-div h2 {
         margin-top: -6%;
         font-size: 30px !important;
     }
-
     .section2-images div:hover .hover-div p {
         font-size: 18px;
         margin-top: -8%;
@@ -1322,34 +1140,30 @@ margin-bottom: 2%;
         margin-bottom: 2%;
     }
     .second-title {
-        display: flex; /* Flexbox kullanarak öğeleri yan yana diziyoruz */
-        justify-content: space-between; /* Öğeler arasına boşluk bırakır */
-        align-items: center; /* Yükseklikleri hizalar */
-        gap: 20px; /* Öğeler arasındaki boşluk */
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 20px; 
     }
-    
     .second-title {
-        max-width: 100%; /* Resmin genişliğini kontrol edin */
+        max-width: 100%; 
         height: auto;
     }
-    
     .second-title ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         margin-left: 4%;
-        display: flex; /* Linkleri yan yana hizalar */
-        gap: 3px; /* Linkler arasında boşluk */
+        display: flex; 
+        gap: 3px; 
     }
-    
     .second-title .register-section {
-        display: flex; /* Icon ve bağlantıyı yan yana hizalar */
+        display: flex; 
         align-items: center;
         gap: 10px;
     }
-    
     .second-title .search-container {
-        display: flex; /* Arama kutusunu ve sonuçları yan yana hizalar */
+        display: flex;
         align-items: center;
         gap: 10px;
         margin-top: -0.1%;
@@ -1387,44 +1201,38 @@ margin-bottom: 2%;
         margin-top: -24% !important;
     }
 }
-
 @media (min-width: 1251px) and (max-width: 2000px) {
     .second-title {
-        display: flex; /* Flexbox kullanarak öğeleri yan yana diziyoruz */
-        justify-content: space-between; /* Öğeler arasına boşluk bırakır */
-        align-items: center; /* Yükseklikleri hizalar */
-        gap: 20px; /* Öğeler arasındaki boşluk */
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 20px; 
     }
-    
     .second-title{
-        max-width: 100%; /* Resmin genişliğini kontrol edin */
+        max-width: 100%; 
         height: auto;
     }
-    
     .second-title ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         margin-left: 4%;
-        display: flex; /* Linkleri yan yana hizalar */
-        gap: 3px; /* Linkler arasında boşluk */
+        display: flex; 
+        gap: 3px; 
     }
-    
     .second-title .register-section {
-        display: flex; /* Icon ve bağlantıyı yan yana hizalar */
+        display: flex; 
         align-items: center;
         gap: 10px;
     }
-    
     .second-title .search-container {
-        display: flex; /* Arama kutusunu ve sonuçları yan yana hizalar */
+        display: flex; 
         align-items: center;
         gap: 10px;
         margin-top: -0.1%;
-    }
-    
+    } 
     #favorite-icon {
-        font-size: 32px; /* Icon boyutunu ayarlayın */
+        font-size: 32px; 
         cursor: pointer;
         margin-right: 10%;
         margin-top: -1%;
@@ -1442,16 +1250,15 @@ margin-bottom: 2%;
         font-size:1.4vw;
     }
     .section2-images {
-        display: flex; /* Flexbox ilə divləri yan yana düzürük */
+        display: flex; 
         overflow-x: scroll;
         scrollbar-width: none;
-        scroll-snap-type: x mandatory; /* Yatayda sıralama */
-        width: 100%; /* Kapsayıcı konteynerin genişliyini tam edirik */
+        scroll-snap-type: x mandatory; 
+        width: 100%; 
     }
-    
     .section2-images div {
-        flex: 0 0 25%; /* Hər bir divin genişliyini 33.33% edirik */
-        scroll-snap-align: start; /* Divlərin başlanğıcını hizalayır */
+        flex: 0 0 25%; 
+        scroll-snap-align: start; 
     }
     .indicators{
         position: relative;
@@ -1492,43 +1299,33 @@ margin-bottom: 2%;
         margin-left: 17% !important;
     }
 }
-
-
-
-/* Burger menyunun sabit sağ sütun kimi görünməsi */
 .burger-menu {
-    position: absolute; /* Səhifədə sabit yerləşmə */
-    top: 18%; /* Ekranın ortasında yerləşdirmək üçün */
-    right: 0px; /* Sağdan məsafə */
-    transform: translateY(-50%); /* Ortaya dəqiq yerləşdirmək üçün */
+    position: absolute; 
+    top: 21%; 
+    right: 0px; 
+    transform: translateY(-50%);
     background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100vw;
     padding: 10px 0;
-    display: none; /* İlkin olaraq gizlidir */
-    z-index: 3; /* Digər elementlərin üstündə olsun */
+    display: none; 
+    z-index: 3; 
 }
-
-/* Burger menyunun açıq vəziyyəti */
 .burger-menu.active {
     display: block;
 }
-
-/* Burger menyu elementlərinin stili */
 .burger-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .burger-menu ul li {
     margin: 0;
     padding: 10px 20px;
-    text-align: left; /* Mətnin hizalanması */
+    text-align: left; 
 }
-
 .burger-menu ul li a{
     text-decoration: none;
     color: #333;
@@ -1537,7 +1334,6 @@ margin-bottom: 2%;
     display: block;
     transition: background-color 0.3s ease;
 }
-
 .burger-menu ul li a:hover {
     background-color: #f1f1f1;
 }
@@ -1557,7 +1353,6 @@ margin-bottom: 2%;
     font-family: "Roboto", sans-serif;
     display: block;
     transition: background-color 0.3s ease;
-
 }
 .scroll-to-top {
     position: fixed;
@@ -1572,8 +1367,6 @@ margin-bottom: 2%;
     font-size: 24px;
     z-index: 1000;
 }
-
-/* Ox hover vəziyyəti */
 .scroll-to-top:hover {
     background-color: #555;
 }
@@ -1582,5 +1375,75 @@ body{
     margin: 0px;
     overflow-x:hidden ;
 }
+.modal1 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;
+    padding: 20px;
+}
+.modal1 div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#weatherDetails {
+    padding-top: 20px;
+}
+.close1 {
+    position: absolute;
+    top: 50px;
+    right: 31%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+#get-weather {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#get-weather:hover {
+    background-color: #45a049;
+}
+#weatherTrigger{
+    position: absolute;
+    right: 10px;
+}
+#weatherTrigger p{
+    animation: glow 1.5s ease-in-out infinite alternate;
 
-
+    text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+    }
+    50% {
+        text-shadow: 0 0 20px #00F, 0 0 30px #00F, 0 0 40px #00F, 0 0 50px #00F;
+    }
+    100% {
+        text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+    }
+}
+#weatherTrigger1{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    transition: background-color 0.3s ease;
+}

@@ -1,10 +1,8 @@
-/* Ümumi Stil */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7fc;
@@ -14,7 +12,6 @@
     min-height: 100vh;
     color: #333;
   }
-  
   .container {
     width: 100vw;
     background-color: #fff;
@@ -26,7 +23,6 @@
     overflow: hidden;
     animation: fadeIn 1s ease-out;
   }
-  
   h1 {
     color: #2d2d2d;
     font-size: 36px;
@@ -35,7 +31,6 @@
     font-weight: 700;
     animation: fadeInUp 1s ease-out;
   }
-  
   .review-form {
     display: flex;
     flex-direction: column;
@@ -43,7 +38,6 @@
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-out 0.2s;
   }
-  
   textarea,
   input {
     width: 100%;
@@ -55,18 +49,15 @@
     resize: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
-  
   textarea:focus,
   input:focus {
     border-color: #4CAF50;
     outline: none;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
   }
-  
   textarea {
     min-height: 120px;
   }
-  
   button {
     padding: 12px 25px;
     font-size: 16px;
@@ -78,23 +69,19 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: 600;
   }
-  
   button:hover {
     background-color: #45a049;
     transform: scale(1.05);
   }
-  
   .reviews {
     margin-top: 40px;
     animation: fadeInUp 1s ease-out 0.4s;
   }
-  
   .reviews-list {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
-  
   .review {
     background-color: #f9f9f9;
     padding: 20px;
@@ -107,12 +94,10 @@
     position: relative;
     animation: slideIn 0.8s ease-out forwards;
   }
-  
   .review.show {
     opacity: 1;
     transform: translateY(0);
   }
-  
   .review p {
     font-size: 16px;
     color: #555;
@@ -120,7 +105,6 @@
     line-height: 1.5;
     transition: color 0.3s ease;
   }
-  
   .review .author {
     font-weight: bold;
     font-size: 14px;
@@ -128,24 +112,19 @@
     text-align: right;
     letter-spacing: 0.5px;
   }
-  
   .review:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
   }
-  
   .review:hover p {
     color: #4CAF50;
   }
-  
   @media (max-width: 768px) {
     .review-form button {
       width: 100%;
     }
   }
-  
-  /* Keyframe Animations */
-  @keyframes fadeIn {
+    @keyframes fadeIn {
     0% {
       opacity: 0;
     }
@@ -153,7 +132,6 @@
       opacity: 1;
     }
   }
-  
   @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -164,7 +142,6 @@
       transform: translateY(0);
     }
   }
-  
   @keyframes slideIn {
     0% {
       opacity: 0;
@@ -185,3 +162,19 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
   }
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .star-rating span {
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  .star-rating span:hover,
+  .star-rating span.selected {
+    color: gold;
+  }
+  

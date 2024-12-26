@@ -4,44 +4,36 @@
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
 }
-
 .first-title {
     display: flex;
     padding: 10px;
     border: 1px solid black; 
     background-color: #767878;
     color: white;}
-
 .map {
     width: 20px;
     margin-left: 70%;
     margin-right: 15px;
 }
-
 .azerbaijan-logo {
     width: 15%;
     margin-left: 2%;
 }
-
 .src {
     width: 20px;
 }
-
 .second-title {
     display: flex;
     border-bottom: 1px solid black;
 }
-
 .second-title ul {
     display: flex;
     padding-top: 50px;
     margin-left: 8%;
 }
-
 .second-title ul a {
     text-decoration: none;
 }
-
 .second-title ul li {
     list-style-type: none;
     padding-right: 130px;
@@ -60,10 +52,9 @@
 .search-container {
     position: relative;
     width: 100%;
-    max-width: 300px; /* Maksimum en */
+    max-width: 300px; 
     margin: 10px auto;
 }
-
 #search-input {
     width: 100%;
     padding: 10px;
@@ -74,12 +65,10 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
 }
-
 #search-input:focus {
     border-color: #f9a826;
     outline: none;
 }
-
 #search-results {
     position: absolute;
     top: 100%;
@@ -95,17 +84,14 @@
     scrollbar-width: none;
     z-index: 10;
 }
-
 #search-results p {
     margin: 0;
     padding: 10px;
     cursor: pointer;
 }
-
 #search-results p:hover {
     background-color: #f0f0f0;
 }
-
 #search-results .result-item {
     padding: 10px;
     background-color: #f1f1f1;
@@ -116,22 +102,19 @@
     display: block;
     margin-bottom: 10px;
 }
-
 #search-results .result-item:hover {
     background-color: #e8f5e9;
 }
 .register-section {
     display: flex;
     align-items: center;
-    gap: 10px;  /* İkon ilə mətn arasındaki boşluğu müəyyən edir */
+    gap: 10px; 
 }
-
 .user-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
-
 .register-link {
     font-size: 16px;
     font-weight: bold;
@@ -139,7 +122,6 @@
     color: #333;
     transition: color 0.3s ease;
 }
-
 .register-link:hover {
     color: #007bff;
 }
@@ -148,35 +130,28 @@
      height: 640px; 
      display: none
 }
-/* İlkin görünüş üçün CSS */
 .first-title {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .map {
     width: 20px;
     height: 20px;
 }
-
 #mapTrigger {
     cursor: pointer;
 }
-
-/* Style for the modal */
 #map-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
 }
-
-/* Modal content */
 .modal-content {
     position: absolute;
     top: 50%;
@@ -187,8 +162,6 @@
     width: auto;
     height: auto;
 }
-
-/* Close button */
 .close {
     position: absolute;
     top:10px;
@@ -197,7 +170,6 @@
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-
 }
 .close:hover{
 color:red;
@@ -207,7 +179,6 @@ color:red;
     height: 800px;
     width: 100%;
 }
-
 .backgroundimage::after {
     content: "";
     position: absolute;
@@ -218,13 +189,11 @@ color:red;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
-
 .backgroundimage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .name {
     position: absolute;
     top: 50%;
@@ -235,7 +204,6 @@ color:red;
     text-shadow: 2px 2px 5px black;
     z-index: 2;
 }
-
 i {
     position: absolute;
     top: 60%;
@@ -248,7 +216,6 @@ i {
     border-radius: 5px;
     z-index: 2;
 }
-
 .information {
     position: absolute;
     top: 75%;
@@ -264,16 +231,16 @@ i {
 }
 .district {
     position: absolute;
-    top: 100px; /* Ana səhifədən müəyyən məsafədə */
+    top: 100px; 
     left: 0;
-    width: 20%; /* Divin eni */
-    background-color: #fff; /* Arxa fon rəngi */
+    width: 20%; 
+    background-color: #fff; 
     padding: 7px;
-    display: none; /* İlk başda gizli olsun */
-    z-index: 10; /* Digər elementlərdən üstün olsun */
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Gözəl kölgə effekti */
-    border-radius: 8px; /* Küncləri yuvarlaqlaşdırmaq */
-    transition: transform 0.3s ease-in-out; /* Divin animasiyasını əlavə edirik */
+    display: none; 
+    z-index: 10; 
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    transition: transform 0.3s ease-in-out; 
     max-height: 400px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -287,17 +254,14 @@ i {
 .district ul {
     display: flex;
     flex-direction: column;
-    padding: 0; /* Listənin əvvəlki paddinglərini sıfırlayır */
-    margin: 0; /* Listənin əvvəlki marginlərini sıfırlayır */
+    padding: 0; 
+    margin: 0;
 }
-
 .district li {
-    margin: 5px 0; /* Üst və alt tərəfdən 5px boşluq əlavə edir, daha az məsafə */
-    text-align: center; /* Mətni mərkəzləşdirir */
+    margin: 5px 0; 
+    text-align: center;
     font-size: 17px;
 }
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -308,7 +272,6 @@ i {
         transform: translateY(0);
     }
 }
-
 .name, i, .information {
     animation: fadeIn 1s ease-in-out;
 }
@@ -320,7 +283,6 @@ i {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     text-align: center;
 }
-
 .main-part2 h2 {
     font-size: 40px;
     margin-bottom: 30px;
@@ -329,7 +291,6 @@ i {
     text-transform: uppercase; 
     letter-spacing: 2px; 
 }
-
 .main-part2 p {
     font-size: 20px;
     line-height: 1.8;
@@ -337,13 +298,11 @@ i {
     text-align: justify; 
     margin-top: 15px;
 }
-
 .main-part2 p::first-letter {
     font-size: 30px; 
     font-weight: bold;
     color: #ff5722;
 }
-
 .main-part2:hover {
     transform: scale(1.02); 
     transition: transform 0.3s ease-in-out; 
@@ -358,7 +317,6 @@ i {
     font-size:60px ;
     text-align:center;
 }
-
 .interesting-facts {
     display: grid; 
     grid-template-columns: repeat(4, 1fr);
@@ -368,7 +326,6 @@ i {
     margin: 40px auto; 
     padding: 10px;
 }
-
 .interesting-fact {
     background-color: #f9f9f9; 
     border: 1px solid #ddd; 
@@ -379,11 +336,9 @@ i {
     transition: transform 0.3s ease; 
     height: 400px;
 }
-
 .interesting-fact:hover {
     transform: scale(1.05); 
 }
-
 .interesting-fact img {
     width: 100%; 
     height: 180px;
@@ -396,7 +351,6 @@ footer {
     padding: 40px 20px;
     font-family: 'Josefin Sans', sans-serif;
 }
-
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -405,66 +359,51 @@ footer {
     margin: 0 auto;
     gap: 20px;
 }
-
 .footer-about, .footer-links, .footer-social {
     flex: 1 1 300px;
 }
-
 .footer-about h3, .footer-links h3, .footer-social h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
     color: #f9a826;
 }
-
 .footer-about p, .footer-links ul {
     font-size: 1em;
     line-height: 1.6;
 }
-
 .footer-links ul {
     list-style: none;
     padding: 0;
 }
-
 .footer-links ul li {
     margin-bottom: 10px;
 }
-
 .footer-links ul li a {
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease;
 }
-
 .footer-links ul li a:hover {
     color: #f9a826;
 }
-
 .social-icons {
     display: flex;
     gap: 10px;
 }
-
 .social-icons a img {
     width: 32px;
     height: 32px;
-    
 }
-
-
-
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
-    
+    margin-top: 20px;   
 }
 .search-container {
     position: relative;
     width: 100%;
-    max-width: 300px; /* Maksimum en */
+    max-width: 300px; 
     margin: 20px auto;
 }
-
 #search-input {
     width: 100%;
     padding: 10px;
@@ -475,12 +414,10 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
 }
-
 #search-input:focus {
     border-color: #f9a826;
     outline: none;
 }
-
 #search-results {
     position: absolute;
     top: 100%;
@@ -495,17 +432,14 @@ footer {
     margin-top: 5px;
     scrollbar-width: none;
 }
-
 #search-results p {
     margin: 0;
     padding: 10px;
     cursor: pointer;
 }
-
 #search-results p:hover {
     background-color: #f0f0f0;
 }
-
 #search-results .result-item {
     padding: 10px;
     background-color: #f1f1f1;
@@ -516,22 +450,19 @@ footer {
     display: block;
     margin-bottom: 10px;
 }
-
 #search-results .result-item:hover {
     background-color: #e8f5e9;
 }
 .register-section {
     display: flex;
     align-items: center;
-    gap: 10px;  /* İkon ilə mətn arasındaki boşluğu müəyyən edir */
+    gap: 10px; 
 }
-
 .user-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
-
 .register-link {
     font-size: 16px;
     font-weight: bold;
@@ -539,7 +470,6 @@ footer {
     color: #333;
     transition: color 0.3s ease;
 }
-
 .register-link:hover {
     color: #007bff;
 }
@@ -548,35 +478,28 @@ footer {
      height: 640px; 
      display: none
 }
-/* İlkin görünüş üçün CSS */
 .first-title {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .map {
     width: 20px;
     height: 20px;
 }
-
 #mapTrigger {
     cursor: pointer;
 }
-
-/* Style for the modal */
 #map-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
 }
-
-/* Modal content */
 .modal-content {
     position: absolute;
     top: 50%;
@@ -587,8 +510,6 @@ footer {
     width: auto;
     height: auto;
 }
-
-/* Close button */
 .close {
     position: absolute;
     top:10px;
@@ -597,14 +518,10 @@ footer {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-
 }
 .close:hover{
 color:red;
 }
-
-
-
 .None{
     display: none;
 }
@@ -618,47 +535,39 @@ color:red;
     width: 25px;
     height: 25px;
     display: none;
-
 }
 @media (min-width: 1251px) and (max-width: 2000px) {
-  
-   
     .second-title {
-        display: flex; /* Flexbox kullanarak öğeleri yan yana diziyoruz */
-        justify-content: space-between; /* Öğeler arasına boşluk bırakır */
-        align-items: center; /* Yükseklikleri hizalar */
-        gap: 20px; /* Öğeler arasındaki boşluk */
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        gap: 20px;
     }
-    
     .second-title{
-        max-width: 100%; /* Resmin genişliğini kontrol edin */
+        max-width: 100%;
         height: auto;
     }
-    
     .second-title ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         margin-left: 4% !important;
-        display: flex; /* Linkleri yan yana hizalar */
-        gap: 3px; /* Linkler arasında boşluk */
+        display: flex;
+        gap: 3px;
     }
-    
     .second-title .register-section {
-        display: flex; /* Icon ve bağlantıyı yan yana hizalar */
+        display: flex; 
         align-items: center;
         gap: 10px;
     }
-    
     .second-title .search-container {
-        display: flex; /* Arama kutusunu ve sonuçları yan yana hizalar */
+        display: flex; 
         align-items: center;
         gap: 10px;
         margin-top: -0.1%;
     }
-    
     #favorite-icon {
-        font-size: 32px; /* Icon boyutunu ayarlayın */
+        font-size: 32px;
         cursor: pointer;
         margin-right: 10%;
         margin-top: -1%;
@@ -705,45 +614,37 @@ color:red;
     }
     .burger-menu{
         display: none !important;
-    }
-    
+    } 
 }
-
 @media (min-width: 878px) and (max-width: 1250px) {
     .interesting-facts {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-
     .second-title {
-        display: flex; /* Flexbox kullanarak öğeleri yan yana diziyoruz */
-        justify-content: space-between; /* Öğeler arasına boşluk bırakır */
-        align-items: center; /* Yükseklikleri hizalar */
-        gap: 20px; /* Öğeler arasındaki boşluk */
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
     }
-    
     .second-title {
-        max-width: 100%; /* Resmin genişliğini kontrol edin */
+        max-width: 100%; 
         height: auto;
         margin-left: 2%;
-
     }
-    
     .second-title ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        display: flex; /* Linkleri yan yana hizalar */
+        display: flex; 
         gap: 3px;
     }
-    
     .second-title .register-section {
-        display: flex; /* Icon ve bağlantıyı yan yana hizalar */
+        display: flex; 
         align-items: center;justify-content: space-between;
         gap: 10px;
     }
-    
     .second-title .search-container {
-        display: flex; /* Arama kutusunu ve sonuçları yan yana hizalar */
+        display: flex;
         align-items: center;
         gap: 10px;
         margin-top: -0.1%;
@@ -764,58 +665,19 @@ color:red;
         display: none !important;
     }
 }
-
-/* @media (max-width: 992px) {
-   
-
-    .azerbaijan-logo {
-        width: 20%;
-    }
-
-    .second-title ul li {
-        font-size: 12px;
-    }
-
-    .first-title {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .interesting-facts {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .azerbaijan-logo {
-        width: 25%;
-    }
-
-    .map {
-        width: 15px;
-    }
-
-    .second-title ul li {
-        font-size: 12px;
-    }
-} */
-
 @media (max-width: 576px) {
     .interesting-facts {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-
     .azerbaijan-logo {
         width: 30%;
     }
-
     footer {
         font-size: 12px;
     }
-
     .second-title ul li {
         font-size: 10px;
     }
-
     .interesting-fact img {
         height: 100px;
     }
@@ -823,17 +685,11 @@ color:red;
         width: 70%;
     }
 }
-
-
-
-
-
 @media (max-width: 400px) {
     .burger{
         display: block;
         width: 18px;
         margin-left: 80%;
-
     }
     .user-icon {
         width: 26px;
@@ -850,25 +706,20 @@ color:red;
         display: grid;
         grid-template-columns: repeat(5,1fr);
     }  
-
-        
     body,html{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
-    
     * {
         box-sizing: border-box;
     }
   .register-link{
     display: none;
   }
-
   .link{
     font-size: 2.5vw;
   }
- 
   #favorite-icon{
     font-size: 25px;
     margin-top: -20%;
@@ -886,8 +737,6 @@ color:red;
     width: 90vw;
     margin-top: -1%;
 }
-
-
   .first-title{
     display: flex;
     flex-wrap: nowrap;
@@ -902,49 +751,40 @@ color:red;
   .second-title ul li{
     display: none;
 }
-
-    .search-container {
+.search-container {
         width: 80vw;
-        /* margin: 10px 0; */
         margin-top: -1%;
         margin-left: 2%;
     }
     #mapTrigger{
         margin-left: -13%;
     }
-
     #search-input {
         width: calc(100% - 20px);
         font-size: 12px;
         padding: 5px;
         margin-left: 2%;
     }
-
     #search-results {
         font-size: 10px;
     }
-
     #favorite-icon {
         font-size: 16px;
         margin-top: -15px;
     } #favorite-icon img{
         width: 28px;
         height: 28px;
-        margin-top: 35%;
-    
+        margin-top: 35%; 
 }
-
     footer {
         font-size: 10px;
         text-align: center;
     }
-
     .information{
         margin-top: -72%;
         width: 78% !important;
         margin-left: -13px;
-        font-size: 3.5vw;
-       
+        font-size: 3.5vw;   
     }
     .name{
         margin-top: -50%;
@@ -960,7 +800,6 @@ color:red;
         margin-top: -56%;
         margin-left: -11px;
     }
-
     .main-part2 h2{
         font-size: 6vw;
         margin-bottom: -10px;
@@ -974,8 +813,7 @@ color:red;
     .first-title p {
         font-size: 12px !important;
     }
-  
-    .first-title p:first-child {
+   .first-title p:first-child {
         margin-left: 0;
     }
     .first-title{
@@ -1016,20 +854,20 @@ color:red;
         font-size: 10px;
      }
      .section2-images div {
-        flex: 0 0 100%; /* Divin tam ekranda görünməsini təmin edir */
-        scroll-snap-align: center; /* Div tam mərkəzə hizalanır */
+        flex: 0 0 100%; 
+        scroll-snap-align: center; 
 
     }
     .section2-images {
-        display: flex; /* Divləri yan-yana düzür */
-        overflow-x: scroll; /* Yatay sürüşdürmə üçün */
-        scroll-snap-type: x mandatory; /* Sürüşmə zamanı tam hizalama */
-        gap: 10px; /* Divlər arasında məsafə */
-        width: 100%; /* Konteynerin eni */
-        padding: 10px 4; /* Yuxarı və aşağı aralıq */
+        display: flex; 
+        overflow-x: scroll; 
+        scroll-snap-type: x mandatory; 
+        gap: 10px; 
+        width: 100%; 
+        padding: 10px 4;
     }
     .left, .right {
-        position: absolute; /* Oxları konteynerə uyğun yerləşdirir */
+        position: absolute; 
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba(0, 0, 0, 0.5);
@@ -1042,13 +880,11 @@ color:red;
         font-size: 20px;
         z-index: 10;
     }
-    
     .left {
-        left: 10px; /* Solda yerləşdirir */
+        left: 10px; 
     }
-    
     .right {
-        right: 10px; /* Sağda yerləşdirir */
+        right: 10px; 
     }
     .hover-div h2{
         font-size: 28px !important;
@@ -1057,26 +893,22 @@ color:red;
         font-size: 16px;
     }
     .second-title ul li {
-        display: none;
-        
+        display: none;  
     }
     .burger{
         display: block;
         width: 18px;
         margin-left: 80%;
-
     }
     .district{
         display: none;
     }
-  
+    #weatherTrigger{
+        display: none;
+       }
 }
-
 @media (min-width: 401px) and (max-width: 671px) {
- 
-
-    /* Qalan CSS qaydaları */
-    .interesting-facts {
+     .interesting-facts {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -1146,26 +978,21 @@ color:red;
         text-align: left;
         display: grid;
         grid-template-columns: repeat(5,1fr);
-    }  
-
-        
+    }   
     body,html{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
-    
     * {
         box-sizing: border-box;
     }
   .register-link{
     display: none;
   }
-
   .link{
     font-size: 2.5vw;
   }
- 
   #favorite-icon{
     font-size: 25px;
     margin-top: -20%;
@@ -1174,7 +1001,6 @@ color:red;
     width: 35px;
     height: 35px;
     margin-top: 23%;
-
 }
   #search-results{
     width:96%;
@@ -1185,7 +1011,6 @@ color:red;
     padding: 13px;
     margin-left: 2%;
 }
-
 .search-container {
     width: 90vw;
     margin-top: -1%;
@@ -1195,7 +1020,6 @@ color:red;
     height: 35px;
     margin-top: -6%;
   }
-
   .first-title{
     display: flex;
     flex-wrap: nowrap;
@@ -1210,27 +1034,23 @@ color:red;
   .second-title ul li{
     display: none;
 }
-   
     .first-title {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-
     .map {
         margin-left: 20.4%;
         margin-right: -1%;
     }
-
     .first-title p {
         font-size: 14px;
     }
+    #weatherTrigger{
+        display: none;
+       }
  
 }
-
-
-
-
 .second-title ul {
     list-style-type: none;
      padding: 0; 
@@ -1238,7 +1058,6 @@ color:red;
     display: flex; 
     gap: 3px; 
 }
-
 .second-title ul li {
     padding: 10px 15px; 
      background-color: #f5f5f5; 
@@ -1247,18 +1066,14 @@ color:red;
     font-size: 16px; 
     cursor: pointer; 
 }
-
 .second-title ul li:hover {
-    background-color: #e0e0e0; /* Hover üçün fərqli rəng */
+    background-color: #e0e0e0; 
     transform: scale(1.05);
 }
-
 .second-title ul li a {
     text-decoration: none;
     color: #333;
 } 
-
-
 @media (min-width: 671px) and (max-width: 877px) {
     .fact{
         font-size: 4.8vw;
@@ -1300,14 +1115,11 @@ color:red;
         display: grid;
         margin-top: 3%;
       }
-     
        .search-container{
         margin-top: -1%;
         z-index: 3;
         margin-left: 2%;
      }
-    
-    
      #favorite-icon{
         z-index: 4;
         margin-left: 86%;
@@ -1330,9 +1142,7 @@ color:red;
      .second-title ul{
         margin-top: 1.5%;
         margin-left: 2% !important;
-
      }
-   
      .register-section{
         position: absolute;
         right: 10px;
@@ -1345,22 +1155,19 @@ color:red;
     .burger-menu{
         display: none !important;
     }
-     
     }
-
-
     .district {
         position: absolute;
-        top: 100px; /* Ana səhifədən müəyyən məsafədə */
+        top: 100px; 
         left: 0;
-        width: 20%; /* Divin eni */
-        background-color: #fff; /* Arxa fon rəngi */
+        width: 20%; 
+        background-color: #fff; 
         padding: 7px;
-        display: none; /* İlk başda gizli olsun */
-        z-index: 10; /* Digər elementlərdən üstün olsun */
-        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Gözəl kölgə effekti */
-        border-radius: 8px; /* Küncləri yuvarlaqlaşdırmaq */
-        transition: transform 0.3s ease-in-out; /* Divin animasiyasını əlavə edirik */
+        display: none; 
+        z-index: 10; 
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); 
+        border-radius: 8px; 
+        transition: transform 0.3s ease-in-out; 
         max-height: 400px;
         overflow-y: scroll;
         scrollbar-width: none;
@@ -1374,49 +1181,41 @@ color:red;
     .district ul {
         display: flex;
         flex-direction: column;
-        padding: 0; /* Listənin əvvəlki paddinglərini sıfırlayır */
-        margin: 0; /* Listənin əvvəlki marginlərini sıfırlayır */
+        padding: 0; 
+        margin: 0; 
     }
-    
     .district li {
-        margin: 5px 0; /* Üst və alt tərəfdən 5px boşluq əlavə edir, daha az məsafə */
-        text-align: center; /* Mətni mərkəzləşdirir */
+        margin: 5px 0; 
+        text-align: center; 
         font-size: 17px;
     }
-    /* Burger menyunun sabit sağ sütun kimi görünməsi */
 .burger-menu {
-    position: absolute; /* Səhifədə sabit yerləşmə */
-    top: 18%; /* Ekranın ortasında yerləşdirmək üçün */
-    right: 0px; /* Sağdan məsafə */
-    transform: translateY(-50%); /* Ortaya dəqiq yerləşdirmək üçün */
+    position: absolute; 
+    top: 24%; 
+    right: 0px;
+    transform: translateY(-50%); 
     background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100vw;
     padding: 10px 0;
-    display: none; /* İlkin olaraq gizlidir */
-    z-index: 3; /* Digər elementlərin üstündə olsun */
+    display: none;
+    z-index: 3;
 }
-
-/* Burger menyunun açıq vəziyyəti */
 .burger-menu.active {
     display: block;
 }
-
-/* Burger menyu elementlərinin stili */
 .burger-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .burger-menu ul li {
     margin: 0;
     padding: 10px 20px;
-    text-align: left; /* Mətnin hizalanması */
+    text-align: left; 
 }
-
 .burger-menu ul li a {
     text-decoration: none;
     color: #333;
@@ -1425,7 +1224,6 @@ color:red;
     display: block;
     transition: background-color 0.3s ease;
 }
-
 .burger-menu ul li a:hover {
     background-color: #f1f1f1;
 }
@@ -1445,9 +1243,7 @@ color:red;
     font-family: "Roboto", sans-serif;
     display: block;
     transition: background-color 0.3s ease;
-
 }
-
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -1461,8 +1257,6 @@ color:red;
     font-size: 24px;
     z-index: 1000;
 }
-
-/* Ox hover vəziyyəti */
 .scroll-to-top:hover {
     background-color: #555;
 }
@@ -1470,4 +1264,76 @@ body{
     padding: 0px;
     margin: 0px;
     overflow-x:hidden ;
+}
+.modal1 {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 9999;
+}
+.modal1 div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#weatherDetails {
+    padding-top: 20px;
+}
+.close1 {
+    position: absolute;
+    top: 50px;
+    right: 31%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+#get-weather {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#get-weather:hover {
+    background-color: #45a049;
+}
+#weatherTrigger{
+    position: absolute;
+    right: 10px;
+}
+#weatherTrigger p{
+    animation: glow 1.5s ease-in-out infinite alternate;
+
+    text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+    }
+    50% {
+        text-shadow: 0 0 20px #00F, 0 0 30px #00F, 0 0 40px #00F, 0 0 50px #00F;
+    }
+    100% {
+        text-shadow: 0 0 5px #00F, 0 0 10px #00F, 0 0 15px #00F, 0 0 20px #00F;
+    }
+}
+#weatherTrigger1{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    transition: background-color 0.3s ease;
 }

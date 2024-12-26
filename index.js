@@ -1,150 +1,107 @@
 let leftButton = document.querySelector(".left");
 let rightButton = document.querySelector(".right");
 let imageContainer = document.querySelector(".section2-images");
-
-// Funksiya, ekran ölçüsünə əsasən doğru sürüşmə miqdarını qaytarır
 function getScrollAmount() {
     const divWidth = document.querySelector('.section2-images div').offsetWidth;
     const screenWidth = window.innerWidth;
-
-    // Telefon ölçüsündə bir divin genişliyi
     if (screenWidth <= 400) {
-        return divWidth; // Telefon üçün bir divin genişliyini qaytarırıq
+        return divWidth; 
     } else {
-        return divWidth; // Böyük ekranlar üçün də bir divin genişliyini qaytarırıq
+        return divWidth; 
     }
 }
-
-// Sol və sağ düymələrə klik hadisələri
 leftButton.addEventListener("click", () => {
     imageContainer.scrollBy({
-        left: -getScrollAmount(), // Bir div qədər sola sürüşdür
-        behavior: "smooth", // Hamarlama
+        left: -getScrollAmount(), 
+        behavior: "smooth",
     });
 });
-
 rightButton.addEventListener("click", () => {
     imageContainer.scrollBy({
-        left: getScrollAmount(), // Bir div qədər sağa sürüşdür
-        behavior: "smooth", // Hamarlama
+        left: getScrollAmount(),
+        behavior: "smooth",
     });
 });
-
-// Ekran ölçüsü dəyişdikdə də yenilənir
 window.addEventListener("resize", () => {
     console.log(`Yeni sürüşmə məsafəsi: ${getScrollAmount()}px`);
 });
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    // LocalStorage-dən favoritləri oxuyuruq
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const container = document.getElementById("favorites-container");
-
     if (favorites.length === 0) {
         container.innerHTML = "<p>Favoritlər yoxdur.</p>";
     } else {
         favorites.forEach((favorite) => {
             const div = document.createElement("div");
             div.classList.add("favorite-item");
-
-            // favorite.html yoxlamaq
             if (favorite && favorite.html) {
-                div.innerHTML = favorite.html;  // Əgər favorite.html varsa, onu təyin et
+                div.innerHTML = favorite.html;
             } else {
-                div.innerHTML = "<p>Favorit tapılmadı</p>";  // Əks halda fallback mətnini göstər
+                div.innerHTML = "<p>Favorit tapılmadı</p>";
             }
-
-            // ❤️ düyməsini işlək vəziyyətə gətir
             const like1Button = div.querySelector(".like1");
             if (like1Button) {
                 like1Button.addEventListener("click", function () {
-                    div.remove(); // Div-i səhifədən sil
+                    div.remove();
                     const updatedFavorites = favorites.filter((item) => item.id !== favorite.id);
-                    localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // LocalStorage-i yenilə
+                    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
                 });
             }
-
             container.appendChild(div);
         });
     }
 });
-
-
-// Beyənilən divləri saxlamaq üçün array
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-// Seçimlər üçün dəyişənlər
 document.addEventListener("DOMContentLoaded", function () {
-    // Favoritləri bərpa et
     favorites.forEach((favorite) => {
         document.querySelectorAll("div[data-id]").forEach((div) => {
-            // div.outerHTML ilə yoxlama əvəzinə id və ya başqa uyğun unikal identifikatoru istifadə et
             if (div.dataset.id === favorite.id) {
                 const likeButton = div.querySelector(".like");
                 const like1Button = div.querySelector(".like1");
-
                 if (likeButton && like1Button) {
-                    likeButton.style.display = "none"; // 🤍 düyməsini gizlət
-                    like1Button.style.display = "inline-block"; // ❤️ düyməsini göstər
+                    likeButton.style.display = "none"; 
+                    like1Button.style.display = "inline-block"; 
                 }
             }
         });
     });
-
-    // Ana səhifənin scroll vəziyyətini bərpa et
     const scrollPosition = sessionStorage.getItem("scrollPosition");
     if (scrollPosition) {
         window.scrollTo(0, parseInt(scrollPosition, 10));
     }
 });
-
-// 🤍 düyməsini işlət
 document.querySelectorAll(".like").forEach((likeButton) => {
     likeButton.addEventListener("click", function () {
-        this.style.display = "none"; // 🤍 düyməsini gizlət
-        this.nextElementSibling.style.display = "inline-block"; // ❤️ düyməsini göstər
-
+        this.style.display = "none"; 
+        this.nextElementSibling.style.display = "inline-block";
         const parentDiv = this.closest("div");
         const favoriteData = {
-            id: parentDiv.dataset.id, // Unikal id
-            html: parentDiv.outerHTML || '' // Əgər outerHTML undefined-dirsə, boş string istifadə et
+            id: parentDiv.dataset.id,
+            html: parentDiv.outerHTML || '' 
         };
-
         if (!favorites.find(fav => fav.id === favoriteData.id)) {
             favorites.push(favoriteData);
-            localStorage.setItem("favorites", JSON.stringify(favorites)); // LocalStorage-a yaz
+            localStorage.setItem("favorites", JSON.stringify(favorites)); 
         }
     });
 });
-
-// ❤️ düyməsini işlət
 document.querySelectorAll(".like1").forEach((like1Button) => {
     like1Button.addEventListener("click", function () {
-        this.style.display = "none"; // ❤️ düyməsini gizlət
-        this.previousElementSibling.style.display = "inline-block"; // 🤍 düyməsini göstər
-
+        this.style.display = "none"; 
+        this.previousElementSibling.style.display = "inline-block";
         const parentDiv = this.closest("div");
         favorites = favorites.filter((favorite) => favorite.id !== parentDiv.dataset.id);
-        localStorage.setItem("favorites", JSON.stringify(favorites)); // LocalStorage-a yaz
+        localStorage.setItem("favorites", JSON.stringify(favorites));
     });
 });
-
-// Ürək ikonuna klik edəndə bəyəndikləri başqa səhifəyə göndər
 document.getElementById("favorite-icon").addEventListener("click", function () {
-    sessionStorage.setItem("scrollPosition", window.scrollY); // Səhifənin scroll vəziyyətini yadda saxla
-    localStorage.setItem("favorites", JSON.stringify(favorites)); // Bəyəndikləri localStorage-a saxla
-    window.location.href = "favorites.html"; // Başqa səhifəyə yönləndir
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+    localStorage.setItem("favorites", JSON.stringify(favorites)); 
+    window.location.href = "favorites.html"; 
 });
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search-input");
     const searchResults = document.getElementById("search-results");
-
-    // Axtarış üçün nümunə məlumatlar
     const data = [
         { name: "Bakı", url: "./baku/" },
         { name: "Naxçıvan", url: "./Nakchvan/" },
@@ -158,15 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Göygöl", url: "./slide1" },
         { name: "Qarabağ", url: "./slide5" }
     ];
-
-    // Axtarış qutusunda dəyişiklikləri izləyin
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
         searchResults.innerHTML = "";
-
         if (query) {
             const filteredData = data.filter(item => item.name.toLowerCase().includes(query));
-
             if (filteredData.length > 0) {
                 searchResults.style.display = "block";
                 filteredData.forEach(item => {
@@ -175,10 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     resultItem.href = item.url;
                     resultItem.classList.add("result-item");
                     searchResults.appendChild(resultItem);
-
-                    // Nəticəyə klik edildikdə inputu təmizləyin
                     resultItem.addEventListener("click", () => {
-                        searchInput.value = ""; // Input sahəsini təmizləyir
+                        searchInput.value = "";
                         searchResults.style.display = "none";
                     });
                 });
@@ -190,169 +141,208 @@ document.addEventListener("DOMContentLoaded", () => {
             searchResults.style.display = "none";
         }
     });
-
-    // Sayfadan kənara klik edildikdə nəticələri gizləyin və inputu təmizləyin
     document.addEventListener("click", (e) => {
         if (!searchResults.contains(e.target) && e.target !== searchInput) {
             searchResults.style.display = "none";
-            searchInput.value = ""; // Input sahəsini təmizləyir
+            searchInput.value = ""; 
         }
     });
 });
 
-
-// Xəritəni tərtib etmək üçün funksiya
 function initializeMap() {
-    const map = L.map('mapContainer').setView([40.1431, 47.5769], 6); // Azərbaycanın mərkəz koordinatları və zoom səviyyəsi
-
-    // Xəritə təbəqəsi
+    const map = L.map('mapContainer').setView([40.1431, 47.5769], 6); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 }
-
 let mapModal = document.getElementById('map-modal');
 let mapContainer = document.getElementById('mapContainer');
-// Rəqəmsal xəritə klik hadisəsi
 document.getElementById('mapTrigger').addEventListener('click', function () {
     mapModal.style.display = 'block';
-    mapContainer.style.display = 'block'; // Xəritə konteynerini göstər
-    initializeMap(); // Xəritəni tərtib et
+    mapContainer.style.display = 'block'; 
+    initializeMap();
 });
 document.getElementById('mapTrigger1').addEventListener('click', function () {
     mapModal.style.display = 'block';
-    mapContainer.style.display = 'block'; // Xəritə konteynerini göstər
-    initializeMap(); // Xəritəni tərtib et
+    mapContainer.style.display = 'block';
+    initializeMap();
 });
-
 document.getElementById('close-modal').addEventListener('click', function () {
-
     mapModal.style.display = 'none';
-    mapContainer.style.display = 'none'; // Xəritə konteynerini gizlət
+    mapContainer.style.display = 'none';
 });
-
 window.addEventListener('click', function (event) {
     const mapModal = document.getElementById('map-modal');
-
     if (event.target === mapModal) {
-        mapModal.style.display = 'none'; // Modalı bağla
+        mapModal.style.display = 'none'; 
         const mapContainer = document.getElementById('mapContainer');
-        mapContainer.style.display = 'none'; // Xəritə konteynerini gizlət
+        mapContainer.style.display = 'none';
     }
 });
- 
-
-
-
-
-document.getElementById('districtLink').addEventListener('click', function (e) {
+ document.getElementById('districtLink').addEventListener('click', function (e) {
     const district = document.querySelector('.district');
-    e.preventDefault();  // Səhifənin yenilənməsinin qarşısını alır
-
-    // Rayonlar seçildikdə district hissəsini göstər və ya gizlət
+    e.preventDefault(); 
     if (district.style.display === 'none' || district.style.display === '') {
-        district.style.display = 'block';  // Districti göstər
+        district.style.display = 'block'; 
     } else {
-        district.style.display = 'none';  // Districti gizlət
+        district.style.display = 'none'; 
     }
 });
 document.addEventListener('click', function (e) {
     const district = document.querySelector('.district');
     const districtLink = document.getElementById('districtLink');
-
-    // Əgər klik edilən yer district və ya districtLink deyilsə, districti gizlət
     if (!district.contains(e.target) && e.target !== districtLink) {
-        district.style.display = 'none';  // Districti gizlət
+        district.style.display = 'none';
     }
 });
-
-
-
-// Burger ikonuna klik edildikdə menyunu açıb-bağla
 document.querySelector(".burger").addEventListener("click", function () {
     const burgerMenu = document.querySelector(".burger-menu");
-    burgerMenu.classList.toggle("active"); // "active" sinfini əlavə edib silir
+    burgerMenu.classList.toggle("active");
 });
-
-// Səhifədəki digər hissəyə klik edildikdə burger menyunu bağla
 document.addEventListener("click", function (e) {
     const burgerMenu = document.querySelector(".burger-menu");
     const burgerIcon = document.querySelector(".burger");
-    
     if (!burgerMenu.contains(e.target) && !burgerIcon.contains(e.target)) {
         burgerMenu.classList.remove("active");
     }
 });
-
-
 document.querySelector(".user-icon").addEventListener("click", function () {
-    window.location.href = "register.html"; // Qeydiyyat səhifəsinin yolunu təyin edin
+    window.location.href = "register.html";
 });
-
-
 document.getElementById('districtLink1').addEventListener('click', function (e) {
     const district1 = document.querySelector('.district1');
-    e.preventDefault(); // Səhifənin yenilənməsinin qarşısını alır
-
-    // Rayonlar seçildikdə district1 hissəsini göstər və ya gizlət
+    e.preventDefault();
     if (district1.style.display === 'none' || district1.style.display === '') {
-        district1.style.display = 'block'; // District1-i göstər
+        district1.style.display = 'block'; 
     } else {
-        district1.style.display = 'none'; // District1-i gizlət
+        district1.style.display = 'none';
     }
 });
-
-// Səhifənin digər yerlərinə klik hadisəsi
 document.addEventListener('click', function (e) {
     const district1 = document.querySelector('.district1');
     const districtLink1 = document.getElementById('districtLink1');
-
-    // Əgər klik edilən yer district1 və ya districtLink1 deyilsə, district1-i gizlət
     if (!district1.contains(e.target) && e.target !== districtLink1) {
-        district1.style.display = 'none'; // District1-i gizlət
+        district1.style.display = 'none'; 
     }
 });
 
-
-
-// Bütün keçidlərə event listener əlavə edirik
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();  // Keçidin standart işini ləğv edir
-
-        // Kliklənən elementin href atributundakı #id ilə uyğun olan elementi tapır
-        const targetId = this.getAttribute('href').substring(1);  // #id-dən # işarəsini çıxarır
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href').substring(1); 
         const targetElement = document.getElementById(targetId);
-
-        // Elementə smooth scroll ilə keçid edirik
         targetElement.scrollIntoView({
-            behavior: 'smooth',  // Keçidi yumşaq etmək
-            block: 'start'  // Elementin üst hissəsini ekranın yuxarısına yerləşdirmək
+            behavior: 'smooth', 
+            block: 'start' 
         });
     });
 });
-
-
-
-// JavaScript ilə scroll funksiyası
 document.addEventListener("DOMContentLoaded", function() {
     const scrollToTopButton = document.getElementById("scroll-to-top");
-
-    // Səhifə aşağıya endikdə oxu göstərmək
     window.addEventListener("scroll", function() {
-        if (window.scrollY > 300) {  // 300 piksel aşağı endikdə oxu göstər
+        if (window.scrollY > 300) { 
             scrollToTopButton.style.display = "block";
         } else {
-            scrollToTopButton.style.display = "none";  // Səhifə yuxarı olduqda oxu gizlət
+            scrollToTopButton.style.display = "none";
         }
     });
-
-    // Oxu kliklədikdə səhifəni yuxarı sürüşdür
     scrollToTopButton.addEventListener("click", function() {
         window.scrollTo({
-            top: 0,    // Səhifənin yuxarı hissəsinə
-            behavior: 'smooth'  // Yumşaq keçid (smooth scroll)
+            top: 0,  
+            behavior: 'smooth'
         });
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const weatherTrigger = document.getElementById("weatherTrigger");
+    const weatherModal = document.getElementById("weather-modal");
+    const closeWeatherModal = document.getElementById("close-weather-modal");
+    const getWeatherButton = document.getElementById("get-weather");
+    const cityInput = document.getElementById("city-input");
+    const weatherDetails = document.getElementById("weatherDetails");
+    weatherTrigger.addEventListener("click", function() {
+        weatherModal.style.display = "block";
+    });
+    closeWeatherModal.addEventListener("click", function() {
+        weatherModal.style.display = "none";
+    });
+    function getWeather(city) {
+        const apiKey = "5fbf228287a44fc5a1d9a627ec694eb4";
+        const url = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const weather = data.data[0];
+                const cityName = weather.city_name;
+                const temperature = weather.temp;
+                const description = weather.weather.description;
+                const windSpeed = weather.wind_spd;
+                const humidity = weather.rh;
+                weatherDetails.innerHTML = `
+                    <h3>${cityName} Hava Şəraiti</h3>
+                    <p>Temperatur: ${temperature}°C</p>
+                    <p>Hava: ${description}</p>
+                    <p>Külək sürəti: ${windSpeed} km/h</p>
+                    <p>Nəmlik: ${humidity}%</p>
+                `;
+            })
+            .catch(error => {
+                weatherDetails.innerHTML = `<p>Hava məlumatı alınarkən xəta baş verdi.</p>`;
+            });
+    }
+    getWeatherButton.addEventListener("click", function() {
+        const city = cityInput.value.trim();
+        if (city) {
+            getWeather(city);
+        } else {
+            weatherDetails.innerHTML = "<p>Şəhər adı daxil edin.</p>";
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const weatherTrigger1 = document.getElementById("weatherTrigger1");
+    const weatherModal = document.getElementById("weather-modal");
+    const closeWeatherModal = document.getElementById("close-weather-modal");
+    const getWeatherButton = document.getElementById("get-weather");
+    const cityInput = document.getElementById("city-input");
+    const weatherDetails = document.getElementById("weatherDetails");
+    weatherTrigger1.addEventListener("click", function() {
+        weatherModal.style.display = "block";
+    });
+    closeWeatherModal.addEventListener("click", function() {
+        weatherModal.style.display = "none";
+    });
+    function getWeather(city) {
+        const apiKey = "5fbf228287a44fc5a1d9a627ec694eb4";
+        const url = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const weather = data.data[0];
+                const cityName = weather.city_name;
+                const temperature = weather.temp;
+                const description = weather.weather.description;
+                const windSpeed = weather.wind_spd;
+                const humidity = weather.rh;
+                weatherDetails.innerHTML = `
+                    <h3>${cityName} Hava Şəraiti</h3>
+                    <p>Temperatur: ${temperature}°C</p>
+                    <p>Hava: ${description}</p>
+                    <p>Külək sürəti: ${windSpeed} km/h</p>
+                    <p>Nəmlik: ${humidity}%</p>
+                `;
+            })
+            .catch(error => {
+                weatherDetails.innerHTML = `<p>Hava məlumatı alınarkən xəta baş verdi.</p>`;
+            });
+    }
+    getWeatherButton.addEventListener("click", function() {
+        const city = cityInput.value.trim();
+        if (city) {
+            getWeather(city);
+        } else {
+            weatherDetails.innerHTML = "<p>Şəhər adı daxil edin.</p>";
+        }
     });
 });

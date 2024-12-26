@@ -15,14 +15,24 @@
     <header>
         <div class="first-title" id="cities">
             <p>Azərbaycan Turizm Bürosu</p>
+            <div id="weatherTrigger"><p>Hava Şəraiti</p></div>
             <div><img src="./Images/burger.svg" alt="" class="burger"></div>
+        </div>
+        <div id="weather-modal" class="modal1">
+            <span class="close1" id="close-weather-modal">X</span>
+            <div>
+                <input type="text" id="city-input" placeholder="Şəhər adı daxil edin" />
+                <button id="get-weather">Hava Şəraitini Göstər</button>
+            </div>
+            <div id="weatherDetails"></div>
         </div>
         <div class="burger-menu" >
                 <ul>
                     <li><a href="" >Ana səhifə</a></li>
                     <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
                     <li id="mapTrigger1">Rəqəmsal Xəritə</li>
-
+                    <li id="weatherTrigger1">Hava Şəraitini Göstər</li>
+                    <li><a href="./game/index.html">Sual-Cavab oyunu</a></li>
                 </ul>
                 <div class="district1">
                     <ul>
@@ -49,7 +59,6 @@
                     <li><a href="" >Ana səhifə</a></li>
                     <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
                     <li id="mapTrigger">Rəqəmsal Xəritə</li>
-
                 </ul>
                 <div class="district">
                     <ul>
@@ -76,10 +85,8 @@
                 </div>
                 <div id="favorite-icon">
                     <img src="./Images/heart.png" alt="">
-                </div>
-                
-            </div>
-            
+                </div>  
+            </div>  
         </header> 
         <div id="scroll-to-top" class="scroll-to-top">↑</div>
     <main> 
@@ -106,7 +113,6 @@
                     <p class="slide-text">Qədim mədəniyyət <a href="./slide5/" class="link-slide">...Daha Ətraflı</a></p>
                 </div>
             </div>
-            
             <div class="indicators">
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -130,10 +136,14 @@
                 </ol>
                 <p>Burada Azərbaycanın unikal irsini birlikdə araşdırır, qəlblərdə unudulmaz səyahət təəssüratları yaradırıq. Gəlin, bu möhtəşəm səyahətə birlikdə çıxaq!</p>
             </div>
-            
+            <div class="about">
+                <img src="./Images/QA.gif" alt="">
+                <h2  class="review">Xəzinə oyunu</h2>
+                <p> Platformada xəzinə oyunu, Azərbaycanın bölgələri haqqında maraqlı və faydalı məlumatları əyləncəli şəkildə öyrənməyə imkan verən bir sual-cavab hissəsidir. Bu oyun vasitəsilə iştirakçılar, hər bir bölgə ilə bağlı müxtəlif suallar cavablandıraraq, həm əylənir, həm də bilmədikləri yeni məlumatlar əldə edirlər.<a href="./game/index.html">O zaman başlayaq</a> </p>
+            </div>
         </section>
         <section>
-            <p class="section2-p1">hara getmək <i>istəyirsiniz</i></p>
+            <p class="section2-p1">hara getmək<i>istəyirsiniz</i></p>
             <div class="section2">
                 <button class="left">←</button>
                 <div class="section2-images">
@@ -187,7 +197,6 @@
                         <h2>Qusar</h2>
                         <p>Qədimlik ilə müasirliyin vəhdəti olan Bakıya xoş gəlmişsiniz. Küləklər şəhəri Bakıda səmalara ucalan Alov Qüllələri, YUNESKO-nun dünya mədəni irsi siyahısına salınmış İçərişəhər, onlarla tarixi və mədəni abidələr və daha çox maraqlı məqamlar hər kəsi gözləyir.. <a href="./Qusar/">Daha ətraflı</a></p>
                     </span>
-
                 </div>
                 <div data-id="ismayilli">
                     <img src="./Images/ismaili.png" alt="">
@@ -276,8 +285,7 @@
             <img src="./Images/rewiev.gif" alt="">
             <h2 id="about" class="review">Müştəri rəyləri</h2>
             <p class="review-p">Müştəri rəyləri bizim üçün çox önəmlidir. Məqsədimiz, onlara bölgələr haqqında ətraflı məlumat təqdim edərək səyahətlərini daha yaxşı planlaşdırmalarına kömək etməkdir. Müştərilərimizin fikirləri, göstərdiyimiz xidmətlərin keyfiyyətini artırmaq və fərdi ehtiyaclara uyğun təcrübə yaratmaq üçün əsas rol oynayır."<a href="./review/index.html">Daha çox</a></a></p>
-        </div>
-        
+        </div> 
     </section>
     </main>
     <footer>
@@ -291,10 +299,12 @@
             <div class="footer-links">
                 <h3>Tez keçidlər</h3>
                 <ul>
-                <li><a href="about1">Haqqımızda</a></li>
+                <li><a href="#about1">Haqqımızda</a></li>
                 <li><a href="#cities">Bölgələr</a></li>
                 <li><a href="./Əlaqə/contact.html">Əlaqə</a></li>
                 <li><a href="./review/index.html">Rəylər</a></li>
+                <li><a href="./FAQ/index.html">FAQ</a></li>
+                <li><a href="./game/index.html">Xəzinə oyunu</a></li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -310,8 +320,7 @@
         <div class="footer-bottom">
             <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
         </div>
-    </footer>
-    
+    </footer>   
     <script src="./index.js"></script>
 </body>
 </html>

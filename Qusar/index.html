@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qusar</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../baku/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
 </head>
 <body>
     <header>
-        <div class="first-title">
-            <p id="cities">Azərbaycan Turizm Bürosu</p>
+        <div class="first-title" id="cities">
+            <p>Azərbaycan Turizm Bürosu</p>
+            <div id="weatherTrigger"><p>Hava Şəraiti</p></div>
             <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+        </div>
+        <div id="weather-modal" class="modal1">
+            <span class="close1" id="close-weather-modal">X</span>
+            <div>
+                <input type="text" id="city-input" placeholder="Şəhər adı daxil edin" />
+                <button id="get-weather">Hava Şəraitini Göstər</button>
+            </div>
+            <div id="weatherDetails"></div>
+        </div>
             <div class="burger-menu" >
                 <ul>
                     <li><a href="" class="home1">Ana səhifə</a></li>
                     <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
                     <li id="mapTrigger1">Rəqəmsal Xəritə</li>
-
+                    <li id="weatherTrigger1">Hava Şəraitini Göstər</li>
+                    <li><a href="../game/index.html">Sual-Cavab oyunu</a></li>
                 </ul>
                 <div class="district1">
                     <ul>
@@ -48,7 +58,6 @@
                     <li><a href="" class="home">Ana səhifə</a></li>
                     <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
                     <li id="mapTrigger">Rəqəmsal Xəritə</li>
-
                 </ul>
                 <div class="district" style="display: none;">
                     <ul>
@@ -76,12 +85,11 @@
                 <div id="favorite-icon">
                     <img src="../Images/heart.png" alt="">
                 </div>
-                
             </div>
         </header> 
         <main>
             <section class="main-part">
-                <img src="./gusar1.png" alt="" class="backgroundimage">
+                <img src="../Images/gusar1.png" alt="" class="backgroundimage">
                 <p class="name">Qusar</p>
                 <i>qürurlu zirvələr</i>
                 <p class="information">Azərbaycanın “şimal qapısı” ölkənin ən hündür zirvələri, yüksək səviyyəli dağ-xizək kurortu, gözəl dağ kəndləri və ləzzətli ləzgi mətbəxi və bütün bunları özündə birləşdirən Qafqaz dağlarının heyranedici təbiəti ilə seçilir.</p>
@@ -94,42 +102,42 @@
                 <h2 class="fact">Maraqlı faktlar</h2>
                 <div class="interesting-facts">
                 <div class="interesting-fact">
-                    <img src="./Shahdag-tourism.png" alt="">
+                    <img src="../Images/Shahdag-tourism.png" alt="">
                     <h2>Şahdağ Turizm Kompleksi</h2>
                     <p>Qusar rayonu Şahdağ Milli Parkının yerləşdiyi məkandır. Burada yerləşən Şahdağ Turizm Mərkəzi, qış idman növləri və yay turizmi üçün məşhur bir yerdir.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./gusarchay.png" alt="">
+                    <img src="../Images/gusarchay.png" alt="">
                     <h2>Qusarçay</h2>
                     <p>Rayonun ərazisindən axan Qusarçay həm yerli kənd təsərrüfatı, həm də turistik ərazilər üçün önəmlidir.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./cold-climate.png" alt="">
+                    <img src="../Images/cold-climate.png" alt="">
                     <h2>Dağlıq relyef</h2>
                     <p>Qusarın böyük hissəsi dağlıq ərazidə yerləşir və dəniz səviyyəsindən 4463 metrə qədər yüksələn zirvələri ilə tanınır.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./gusar2.png" alt="">
+                    <img src="../Images/gusar2.png" alt="">
                     <h2>Etnoqrafik zənginlik</h2>
                     <p> Rayon əhalisinin böyük hissəsini ləzgilər təşkil edir, bu da rayonda zəngin ləzgi mədəniyyətini və ənənələrini yaşadır.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./mountainous.png" alt="">
+                    <img src="../Images/mountainous.png" alt="">
                     <h2>Soyuq iqlim</h2>
                     <p>Qusar Azərbaycanın ən soyuq rayonlarından biridir. Xüsusilə qış aylarında buradakı hava temperaturu mənfi 20 dərəcəyə qədər enə bilər.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./laza.png" alt="">
+                    <img src="../Images/laza.png" alt="">
                     <h2>Laza kəndi</h2>
                     <p> Qusarın Laza kəndi, öz təbii gözəllikləri, şəlalələri və dağ mənzərələri ilə məşhurdur. Həmçinin trekking və alpinistlər üçün ideal bir məkandır.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./gusar3.png" alt="">
+                    <img src="../Images/gusar3.png" alt="">
                     <h2>Qafqazın ən hündür zirvələri</h2>
                     <p>Qusar rayonu, Qafqaz dağlarının ən yüksək zirvələrindən bir neçəsinə ev sahibliyi edir və dağ turizmi üçün ideal bir məkandır.</p>
                 </div>
                 <div class="interesting-fact">
-                    <img src="./apple-gusar.png" alt="">
+                    <img src="../Images/apple-gusar.png" alt="">
                     <h2>Alma bağları</h2>
                     <p>Qusar alması ilə də məşhurdur. Burada yetişən alma növləri dadı və keyfiyyəti ilə seçilir.</p>
                 </div>
@@ -148,10 +156,12 @@
                 <div class="footer-links">
                     <h3>Tez keçidlər</h3>
                     <ul>
-                    <li><a href="../index.html#about1">Haqqımızda</a></li>
-                    <li><a href="#cities">Bölgələr</a></li>
-                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
-                    <li><a href="../review/index.html">Rəylər</a></li>
+                        <li><a href="../index.html#about1">Haqqımızda</a></li>
+                        <li><a href="#cities">Bölgələr</a></li>
+                        <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                        <li><a href="../review/index.html">Rəylər</a></li>
+                        <li><a href="../FAQ/index.html">FAQ</a></li>
+                        <li><a href="../game/index.html">Xəzinə oyunu</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -168,6 +178,6 @@
                 <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
             </div>
         </footer>
-    <script src="../baku/index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>qürurlu zirvələr</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../baku/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
 </head>
 <body>
     <header>
-        <div class="first-title">
-            <p id="cities">Azərbaycan Turizm Bürosu</p>
+        <div class="first-title" id="cities">
+            <p>Azərbaycan Turizm Bürosu</p>
+            <div id="weatherTrigger"><p>Hava Şəraiti</p></div>
             <div><img src="../Images/burger.svg" alt="" class="burger"></div>
+        </div>
+        <div id="weather-modal" class="modal1">
+            <span class="close1" id="close-weather-modal">X</span>
+            <div>
+                <input type="text" id="city-input" placeholder="Şəhər adı daxil edin" />
+                <button id="get-weather">Hava Şəraitini Göstər</button>
+            </div>
+            <div id="weatherDetails"></div>
+        </div>
             <div class="burger-menu" >
                 <ul>
                     <li><a href="" class="home1">Ana səhifə</a></li>
                     <li><a href="" class="link1" id="districtLink1">Bölgələr</a></li>
                     <li id="mapTrigger1">Rəqəmsal Xəritə</li>
-
+                    <li id="weatherTrigger1">Hava Şəraitini Göstər</li>
+                    <li><a href="../game/index.html">Sual-Cavab oyunu</a></li>
                 </ul>
                 <div class="district1">
                     <ul>
@@ -48,7 +58,6 @@
                     <li><a href="" class="home">Ana səhifə</a></li>
                     <li><a href="" class="link" id="districtLink">Bölgələr</a></li>
                     <li id="mapTrigger">Rəqəmsal Xəritə</li>
-
                 </ul>
                 <div class="district">
                     <ul>
@@ -75,8 +84,7 @@
                 </div>
                 <div id="favorite-icon">
                     <img src="../Images/heart.png" alt="">
-                </div>
-                
+                </div>                
             </div>
             <div id="scroll-to-top" class="scroll-to-top">↑</div>
         </header> 
@@ -103,10 +111,12 @@
                 <div class="footer-links">
                     <h3>Tez keçidlər</h3>
                     <ul>
-                    <li><a href="../index.html#about1">Haqqımızda</a></li>
-                    <li><a href="#cities">Bölgələr</a></li>
-                    <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
-                    <li><a href="../review/index.html">Rəylər</a></li>
+                        <li><a href="../index.html#about1">Haqqımızda</a></li>
+                        <li><a href="#cities">Bölgələr</a></li>
+                        <li><a href="../Əlaqə/contact.html">Əlaqə</a></li>
+                        <li><a href="../review/index.html">Rəylər</a></li>
+                        <li><a href="../FAQ/index.html">FAQ</a></li>
+                        <li><a href="../game/index.html">Xəzinə oyunu</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -122,8 +132,7 @@
             <div class="footer-bottom">
                 <p>© 2024 Azərbaycan Turizm Bürosu. Bütün hüquqlar qorunur.</p>
             </div>
-        </footer>
-        
-        <script src="../baku/index.js"></script>
+        </footer>   
+        <script src="./index.js"></script>
 </body>
 </html>
