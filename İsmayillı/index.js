@@ -167,18 +167,21 @@ document.getElementById("favorite-icon").addEventListener("click", function () {
     console.log("Redirecting to:", redirectUrl);
     window.location.href = redirectUrl; 
 });
-document.querySelector(".home").addEventListener("click", function (e) {
-    e.preventDefault();
-    const redirectUrl = "../index.html";
-    console.log("Redirecting to:", redirectUrl);
-    window.location.href = redirectUrl;
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".home").addEventListener("click", function (e) {
+        e.preventDefault();
+        const redirectUrl = "../index.html";
+        console.log("Redirecting to:", redirectUrl);
+        window.location.href = redirectUrl;
+    });
+    document.querySelector(".home1").addEventListener("click", function (e) {
+        e.preventDefault();
+        const redirectUrl = "../index.html";
+        console.log("Redirecting to:", redirectUrl);
+        window.location.href = redirectUrl;
+    });
 });
-document.querySelector(".home1").addEventListener("click", function (e) {
-    e.preventDefault(); 
-    const redirectUrl = "/index.html";
-    console.log("Redirecting to:", redirectUrl);
-    window.location.href = redirectUrl;
-});
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".burger").addEventListener("click", function () {
         const burgerMenu = document.querySelector(".burger-menu");
