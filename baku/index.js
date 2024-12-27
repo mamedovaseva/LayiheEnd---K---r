@@ -175,7 +175,7 @@ document.querySelector(".home").addEventListener("click", function (e) {
 });
 document.querySelector(".home1").addEventListener("click", function (e) {
     e.preventDefault(); 
-    const redirectUrl = "/index.html";
+    const redirectUrl = "../index.html";
     console.log("Redirecting to:", redirectUrl);
     window.location.href = redirectUrl;
 });
